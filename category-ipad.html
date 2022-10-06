@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>TopZone - iPhone</title>
+	<link rel="stylesheet" href="css/iphone.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/home.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/web.css">
+	<script type="text/javascript">
+		$(function() {
+			var pull        = $('#pull');
+			menu        = $('nav ul');
+			menuHeight  = menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+		});
+
+		$(window).resize(function(){
+			var w = $(window).width();
+			if(w > 320 && menu.is(':hidden')) {
+				menu.removeAttr('style');
+			}
+		});
+	</script>
+</head>
+<body>    
+	<!-- header -->
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<div id="logo" class="col-md-3 col-sm-12 col-xs-12">
+					<h1>
+						<div class="logo-header"><a href="home.html"><img src="img/home/logo.png"></a>	</div>					
+						<nav><a id="pull" class="btn btn-danger" href="#">
+							<i class="fa fa-bars"></i>
+						</a></nav>			
+					</h1>
+				</div>
+				<div id="search" class="col-md-7 col-sm-12 col-xs-12">
+					<input type="text" name="text" value="Nhập từ khóa ...">
+					<script>
+						var nhaptukhoa = document.querySelector('input[value="Nhập từ khóa ..."]');
+						console.log([nhaptukhoa])
+						nhaptukhoa.onclick=function(){
+							nhaptukhoa.value="";
+						}
+						nhaptukhoa.onblur=function(){
+							nhaptukhoa.value="Nhập từ khóa ...";
+						}
+					</script>
+					<input type="submit" name="submit" value="Tìm Kiếm">
+				</div>
+				<div id="cart" class="col-md-2 col-sm-12 col-xs-12">
+					<a href="cart.html">2</a>		    
+				</div>
+			</div>			
+		</div>
+	</header><!-- /header -->
+	<!-- endheader -->
+
+	<!-- main -->
+	<section id="body">
+		<div class="container">
+			<div class="row">
+				<div id="sidebar" class="col-md-3">
+					<nav id="menu">
+						<ul>
+							<li class="menu-item">danh mục sản phẩm</li>
+							<li class="menu-item"><a href="category-iphone.html" title="">iPhone</a></li>
+							<li class="menu-item"><a href="category-mac.html" title="">Mac</a></li>
+							<li class="menu-item"><a href="category-ipad.html" title="">iPad</a></li>
+							<li class="menu-item"><a href="category-watch.html" title="">Watch</a></li>
+							<li class="menu-item"><a href="category-sound.html" title="">Âm thanh</a></li>
+							<li class="menu-item"><a href="category-accessory.html" title="">Phụ kiện</a></li>
+							<li class="menu-item"><a href="#" title="">TopCare</a></li>						
+						</ul>
+						<!-- <a href="#" id="pull">Danh mục</a> -->
+					</nav>
+
+					<!-- <div id="banner-l" class="text-center">
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-1.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-2.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-5.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-6.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-7.png" alt="" class="img-thumbnail"></a>
+						</div>
+					</div> -->
+				</div>
+
+				<div id="main" class="col-md-9">
+					<!-- main -->
+					<!-- phan slide la cac hieu ung chuyen dong su dung jquey -->
+					<div id="slider">
+						<div id="demo" class="carousel slide" data-ride="carousel">
+
+							<!-- Indicators -->
+							<ul class="carousel-indicators">
+								<li data-target="#demo" data-slide-to="0" class="active"></li>
+								<li data-target="#demo" data-slide-to="1"></li>
+								<li data-target="#demo" data-slide-to="2"></li>
+							</ul>
+
+							<!-- The slideshow -->
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="img/home/banner-l-1.png" alt="Los Angeles" >
+								</div>
+								<div class="carousel-item">
+									<img src="img/home/banner-l-2.png" alt="Chicago">
+								</div>
+								<div class="carousel-item">
+									<img src="img/home/banner-l-3.png" alt="New York" >
+								</div>
+							</div>
+
+							<!-- Left and right controls -->
+							<a class="carousel-control-prev" href="#demo" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</a>
+							<a class="carousel-control-next" href="#demo" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</a>
+						</div>
+					</div>
+
+					<div id="banner-t" class="text-center">
+						<div class="row">
+							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
+								<a href="#"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
+							</div>
+							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
+								<a href="#"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
+							</div>
+						</div>					
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				
+				<ul class="listing-cate">
+					<li class=" item ajaxed __cate_522" data-index="1" data-id="274156" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000508" data-pos="1">
+							<a href="/ipad/ipad-air-5-m1-wifi-cellular-256gb" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad Air 5 WiFi + Cellular" data-id="274156" data-price="24490000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/522/274156/s16/ipad-air-5-5G-pink-650x650.png" alt="iPad Air 5 WiFi + Cellular 256GB" src="https://cdn.tgdd.vn/Products/Images/522/274156/s16/ipad-air-5-5G-pink-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			iPad Air 5 WiFi + Cellular 256GB        </h4>
+			
+							<div class="box-p">
+								<strong class="price">24.490.000₫</strong>
+								<p class="price-old black">24.990.000₫</p>
+									<span class="percent">-2%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="2" data-id="274155" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000505" data-pos="2">
+							<a href="/ipad/ipad-air-5-m1-wifi-cellular-64gb" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad Air 5 WiFi + Cellular" data-id="274155" data-price="20490000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/522/274155/s16/air-5-m1-wifi-cellular-xanh-thumb-650x650.png" alt="iPad Air 5 WiFi + Cellular 64GB" src="https://cdn.tgdd.vn/Products/Images/522/274155/s16/air-5-m1-wifi-cellular-xanh-thumb-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			iPad Air 5 WiFi + Cellular 64GB        </h4>
+			
+							<div class="box-p">
+								<strong class="price">20.490.000₫</strong>
+								<p class="price-old black">20.990.000₫</p>
+									<span class="percent">-2%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="3" data-id="248096" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000497" data-pos="3">
+							<a href="/ipad/ipad-air-5" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad Air 5 WiFi" data-id="248096" data-price="16490000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/522/248096/s16/ipad-air-5-wifi-startlight-650x650.png" alt="iPad Air 5 WiFi 64GB" src="https://cdn.tgdd.vn/Products/Images/522/248096/s16/ipad-air-5-wifi-startlight-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			iPad Air 5 WiFi 64GB        </h4>
+			
+							<div class="box-p">
+								<strong class="price">16.490.000₫</strong>
+								<p class="price-old black">16.990.000₫</p>
+									<span class="percent">-2%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="4" data-id="274154" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000502" data-pos="4">
+							<a href="/ipad/ipad-air-5-m1-wifi-256gb" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad Air 5 WiFi" data-id="274154" data-price="20490000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/522/274154/s16/ipad-air-5-wifi-startlight-650x650.png" alt="iPad Air 5 WiFi 256GB" src="https://cdn.tgdd.vn/Products/Images/522/274154/s16/ipad-air-5-wifi-startlight-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			iPad Air 5 WiFi 256GB        </h4>
+			
+							<div class="box-p">
+								<strong class="price">20.490.000₫</strong>
+								<p class="price-old black">20.990.000₫</p>
+									<span class="percent">-2%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="5" data-id="247517" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000379" data-pos="5">
+							<a href="/ipad/ipad-gen-9" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad 9 10.2 inch WiFi" data-id="247517" data-price="8790000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/522/247517/s16/ipad-gen-9-silver-650x650.png" alt="iPad 9 10.2 inch WiFi">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="iPad 9 10.2 inch WiFi" data-lstarranged="247517,250730">
+							<ul>
+									<li data-url="/ipad/ipad-gen-9" data-id="247517" data-index="0" class="merge__item item act">64GB</li>
+									<li data-url="/ipad/ipad-9-wifi-256gb" data-id="250730" data-index="1" class="merge__item item ">256GB</li>
+							</ul>
+						</div>
+					<h4>
+			iPad 9 10.2 inch WiFi        </h4>
+			
+							<div class="box-p">
+								<strong class="price">8.790.000₫</strong>
+								<p class="price-old black">9.990.000₫</p>
+									<span class="percent">-12%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="6" data-id="250734" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000397" data-pos="6">
+							<a href="/ipad/ipad-mini-6-cellular-64gb" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad mini 6 8.3 inch WiFi + Cellular" data-id="250734" data-price="16990000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/522/250734/s16/ipad-mini-6-5g-pink-650x650.png" alt="iPad mini 6 8.3 inch WiFi + Cellular">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="iPad mini 6 8.3 inch WiFi + Cellular" data-lstarranged="250734,250735">
+							<ul>
+									<li data-url="/ipad/ipad-mini-6-cellular-64gb" data-id="250734" data-index="0" class="merge__item item act">64GB</li>
+									<li data-url="/ipad/ipad-mini-6-cellular-256gb" data-id="250735" data-index="1" class="merge__item item ">256GB</li>
+							</ul>
+						</div>
+					<h4>
+			iPad mini 6 8.3 inch WiFi + Cellular        </h4>
+			
+							<div class="box-p">
+								<strong class="price">16.990.000₫</strong>
+								<p class="price-old black">19.990.000₫</p>
+									<span class="percent">-15%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="7" data-id="248091" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000387" data-pos="7">
+							<a href="/ipad/ipad-mini-6" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad mini 6 8.3 inch WiFi" data-id="248091" data-price="12990000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-650x650.png" alt="iPad mini 6 8.3 inch WiFi">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="iPad mini 6 8.3 inch WiFi" data-lstarranged="248091,250733">
+							<ul>
+									<li data-url="/ipad/ipad-mini-6" data-id="248091" data-index="0" class="merge__item item act">64GB</li>
+									<li data-url="/ipad/ipad-mini-6-wifi-256gb" data-id="250733" data-index="1" class="merge__item item ">256GB</li>
+							</ul>
+						</div>
+					<h4>
+			iPad mini 6 8.3 inch WiFi        </h4>
+			
+							<div class="box-p">
+								<strong class="price">12.990.000₫</strong>
+								<p class="price-old black">14.990.000₫</p>
+									<span class="percent">-13%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="8" data-id="250731" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000383" data-pos="8">
+							<a href="/ipad/ipad-9-wifi-cellular-64gb" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad 9 10.2 inch WiFi + Cellular" data-id="250731" data-price="11790000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/522/250731/s16/ipad-9-wifi-cellular-silver-650x650.png" alt="iPad 9 10.2 inch WiFi + Cellular">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="iPad 9 10.2 inch WiFi + Cellular" data-lstarranged="250731,250732">
+							<ul>
+									<li data-url="/ipad/ipad-9-wifi-cellular-64gb" data-id="250731" data-index="0" class="merge__item item act">64GB</li>
+									<li data-url="/ipad/ipad-9-wifi-cellular-256gb" data-id="250732" data-index="1" class="merge__item item ">256GB</li>
+							</ul>
+						</div>
+					<h4>
+			iPad 9 10.2 inch WiFi + Cellular        </h4>
+			
+							<div class="box-p">
+								<strong class="price">11.790.000₫</strong>
+								<p class="price-old black">13.990.000₫</p>
+									<span class="percent">-15%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="9" data-id="238649" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000353" data-pos="9">
+							<a href="/ipad/ipad-pro-m1-129-inch-wifi-cellular-128gb-2021" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad Pro M1 12.9 inch WiFi + Cellular" data-id="238649" data-price="29290000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/522/238649/s16/ipad-pro-m1-129-inch-wifi-cellular-gray-650x650.png" alt="iPad Pro M1 12.9 inch WiFi + Cellular">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="iPad Pro M1 12.9 inch WiFi + Cellular" data-lstarranged="238649,238651,259651,269333,269334">
+							<ul class="hasScroll">
+									<li data-url="/ipad/ipad-pro-m1-129-inch-wifi-cellular-128gb-2021" data-id="238649" data-index="0" class="merge__item item act">128GB</li>
+									<li data-url="/ipad/ipad-pro-m1-129-inch-wifi-cellular-256gb-2021" data-id="238651" data-index="1" class="merge__item item ">256GB</li>
+									<li data-url="/ipad/pro-m1-129-inch-wifi-cellular-512gb-2021" data-id="259651" data-index="2" class="merge__item item ">512GB</li>
+									<li data-url="/ipad/pro-m1-129-inch-wifi-cellular-1tb-2021" data-id="269333" data-index="3" class="merge__item item ">1TB</li>
+									<li data-url="/ipad/pro-m1-129-inch-wifi-cellular-2tb-2021" data-id="269334" data-index="4" class="merge__item item ">2TB</li>
+							</ul>
+						</div>
+					<h4>
+			iPad Pro M1 12.9 inch WiFi + Cellular        </h4>
+			
+							<div class="box-p">
+								<strong class="price">29.290.000₫</strong>
+								<p class="price-old black">34.990.000₫</p>
+									<span class="percent">-16%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="10" data-id="238624" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000346" data-pos="10">
+							<a href="/ipad/ipad-pro-m1-11-inch-wifi-cellular-128gb-2021" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad Pro M1 11 inch WiFi + Cellular" data-id="238624" data-price="25990000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/522/238624/s16/ipad-pro-m1-11-inch-cellular-wifi-silver-650x650.png" alt="iPad Pro M1 11 inch WiFi + Cellular">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="iPad Pro M1 11 inch WiFi + Cellular" data-lstarranged="238624,261710,269329,269330">
+							<ul>
+									<li data-url="/ipad/ipad-pro-m1-11-inch-wifi-cellular-128gb-2021" data-id="238624" data-index="0" class="merge__item item act">128GB</li>
+									<li data-url="/ipad/pro-m1-11-inch-wifi-cellular-512gb-2021" data-id="261710" data-index="1" class="merge__item item ">512GB</li>
+									<li data-url="/ipad/pro-m1-11-inch-wifi-cellular-1tb-2021" data-id="269329" data-index="2" class="merge__item item ">1TB</li>
+									<li data-url="/ipad/pro-m1-11-inch-wifi-cellular-2tb-2021" data-id="269330" data-index="3" class="merge__item item ">2TB</li>
+							</ul>
+						</div>
+					<h4>
+			iPad Pro M1 11 inch WiFi + Cellular        </h4>
+			
+							<div class="box-p">
+								<strong class="price">25.990.000₫</strong>
+								<p class="price-old black">26.990.000₫</p>
+									<span class="percent">-3%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="11" data-id="237695" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000341" data-pos="11">
+							<a href="/ipad/ipad-pro-m1-11-inch-wifi-128gb-2021" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad Pro M1 11 inch WiFi" data-id="237695" data-price="20190000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/522/237695/s16/ipad-pro-m1-11-inch-wifi-gray-650x650.png" alt="iPad Pro M1 11 inch WiFi">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="iPad Pro M1 11 inch WiFi" data-lstarranged="237695,238623,261709,269327,269328">
+							<ul class="hasScroll">
+									<li data-url="/ipad/ipad-pro-m1-11-inch-wifi-128gb-2021" data-id="237695" data-index="0" class="merge__item item act">128GB</li>
+									<li data-url="/ipad/ipad-pro-m1-11-inch-wifi-256gb-2021" data-id="238623" data-index="1" class="merge__item item ">256GB</li>
+									<li data-url="/ipad/pro-m1-11-inch-wifi-512gb-2021" data-id="261709" data-index="2" class="merge__item item ">512GB</li>
+									<li data-url="/ipad/pro-m1-11-inch-wifi-1tb-2021" data-id="269327" data-index="3" class="merge__item item ">1TB</li>
+									<li data-url="/ipad/pro-m1-11-inch-wifi-2tb-2021" data-id="269328" data-index="4" class="merge__item item ">2TB</li>
+							</ul>
+						</div>
+					<h4>
+			iPad Pro M1 11 inch WiFi        </h4>
+			
+							<div class="box-p">
+								<strong class="price">20.190.000₫</strong>
+								<p class="price-old black">22.990.000₫</p>
+									<span class="percent">-12%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="12" data-id="237699" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000349" data-pos="12">
+							<a href="/ipad/ipad-pro-m1-129-inch-wifi-128gb-2021" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad Pro M1 12.9 inch WiFi" data-id="237699" data-price="25490000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/522/237699/s16/ipad-pro-m1-129-inch-wifi-gray-650x650.png" alt="iPad Pro M1 12.9 inch WiFi">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="iPad Pro M1 12.9 inch WiFi" data-lstarranged="237699,238645,259650,269331,269332">
+							<ul class="hasScroll">
+									<li data-url="/ipad/ipad-pro-m1-129-inch-wifi-128gb-2021" data-id="237699" data-index="0" class="merge__item item act">128GB</li>
+									<li data-url="/ipad/ipad-pro-m1-129-inch-wifi-256gb-2021" data-id="238645" data-index="1" class="merge__item item ">256GB</li>
+									<li data-url="/ipad/pro-m1-129-inch-wifi-512gb-2021" data-id="259650" data-index="2" class="merge__item item ">512GB</li>
+									<li data-url="/ipad/pro-m1-129-inch-wifi-1tb-2021" data-id="269331" data-index="3" class="merge__item item ">1TB</li>
+									<li data-url="/ipad/pro-m1-129-inch-wifi-2tb-2021" data-id="269332" data-index="4" class="merge__item item ">2TB</li>
+							</ul>
+						</div>
+					<h4>
+			iPad Pro M1 12.9 inch WiFi        </h4>
+			
+							<div class="box-p">
+								<strong class="price">25.490.000₫</strong>
+								<p class="price-old black">30.990.000₫</p>
+									<span class="percent">-17%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_522" data-index="13" data-id="228899" data-issetup="0" data-maingroup="244" data-subgroup="931" data-type="1" data-vehicle="1" data-productcode="2440931000307" data-pos="13">
+							<a href="/ipad/ipad-air-4-wifi-cellular-256gb-2020" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="iPad Air 4 10.9 inch WiFi + Cellular" data-id="228899" data-price="18990000.0" data-brand="iPad (Apple)" data-cate="iPad" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_522">
+							<img class="lazyload thumb" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/522/228899/s16/ipad-air-4-cellular-sliver-650x650.png" alt="iPad Air 4 10.9 inch WiFi + Cellular 256GB">
+						</div>
+			
+			
+			
+					<h4>
+			iPad Air 4 10.9 inch WiFi + Cellular 256GB        </h4>
+			
+							<div class="box-p">
+								<strong class="price">18.990.000₫</strong>
+								<p class="price-old black">20.990.000₫</p>
+									<span class="percent">-9%</span>
+							</div>
+				</a>
+			
+					</li>
+						</ul>
+				<!-- end main -->
+			</div>
+		</div>
+	</section>
+	<!-- endmain -->
+
+	<!-- footer -->
+	<footer>
+		<div class="foot">
+			<div class="logo-foot">
+				<a href="/">
+					<i class="topzone-logo"></i>
+				</a>
+				<a href="/tekzone/khac-biet-aar-va-apr-tieu-chuan-cua-hang-uy-quyen-apple-1411356">
+					<i class="topzone-autho"></i>
+				</a>
+			</div>
+			<ul class="list-foot">
+				<li>
+						<span>Tổng đài</span>
+					<a href="tel:1900969642">
+						<span>Mua hàng:</span>
+						<b>1900.9696.42</b> (7:30 - 22:00)
+					</a>
+					<a href="tel:1900986843">
+						<span>CSKH:</span>
+						<b>1900.9868.43</b> (8:00 - 21:30)
+					</a>
+					<a href="tel:1900866854">
+						<span>Kỹ thuật:</span>
+						<b>1900.8668.54</b> (7:30 - 22:00)
+					</a>
+	
+					<div class="footer-social">
+						<p class="txt">Kết nối với chúng tôi</p>
+						<a href="https://www.facebook.com/topzone.vn" target="_blank" class="link-social">
+							<i class="iconsocial-facebook"></i>
+						</a>
+						<a href="https://www.youtube.com/channel/UCoWdPNr8jSr7JM0OFlKvQHw" target="_blank" class="link-social">
+							<i class="iconsocial-youtube"></i>
+						</a>
+						<a href="https://zalo.me/2040551312124557463" target="_blank" class="link-social">
+							<i class="iconsocial-zalo"></i>
+						</a>
+					</div>
+					
+				</li>
+				<li>
+					<span>Hệ thống cửa hàng</span>
+					<a href="/he-thong-cua-hang">
+						Xem 78 cửa hàng 
+					</a>
+					<a href="/noi-quy-cua-hang">
+						Nội quy cửa hàng
+					</a>
+					<a href="/chat-luong-phuc-vu">
+						Chất lượng phục vụ
+					</a>
+					<a href="/bao-hanh-doi-tra">
+						Chính sách bảo hành & đổi trả
+					</a>
+				</li>
+				<li>
+					<span>Hỗ trợ khách hàng</span>
+					<a href="/dieu-kien-giao-dich">
+						Điều kiện giao dịch chung
+					</a>
+					<a href="/huong-dan-mua-hang">
+						Hướng dẫn mua hàng online
+					</a>
+					<a href="/giao-hang">
+						Chính sách giao hàng
+					</a>
+					<a href="/thanh-toan">
+						Hướng dẫn thanh toán
+					</a>
+				</li>
+				<li>
+					<span>Về thương hiệu TopZone</span>
+	
+					<a href="/tekzone/chuong-trinh-tich-diem-sieu-khung-qua-ung-dung-qua-tang-vip-1435360" class="color-link" style="color:#e5e5e5!important;">
+						Tích điểm Quà tặng VIP
+					</a>
+					<a href="/gioi-thieu">
+						Giới thiệu TopZone
+					</a>
+					<a href="https://www.thegioididong.com/b2b">
+						Bán hàng doanh nghiệp
+					</a>
+					<a href="/bao-mat-thong-tin">
+						Chính sách bảo mật thông tin
+					</a>
+					<a rel="nofollow" href="https://www.topzone.vn/?sclient=mobile">Xem bản mobile</a>
+				</li>
+					<li>
+						<span>Trung tâm bảo hành TopCare</span>
+						<a href="/topcare">
+							Giới thiệu TopCare
+						</a>
+					</li>
+			</ul>
+			<div class="text-cpr">
+				<p>
+					© 2018. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. <br />
+					Địa chỉ: 128 Trần Quang Khải, P. Tân Định, Q.1, TP. Hồ Chí Minh. Điện thoại: 028 38125960. 
+				</p>
+			</div>
+			<div class="certify">
+				<a href="http://online.gov.vn/Home/WebDetails/88735" target="_blank"><img class="lazyload" data-src="//cdn.tgdd.vn/mwgcart/topzone/images/certify-bct.png" width="127" /></a>
+				<a href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/topzonevn-1635823490" title="Chung nhan Tin Nhiem Mang" target="_blank"><img class="lazyload" data-src="https://tinnhiemmang.vn/handle_cert?id=topzone.vn" width="150" alt="Chung nhan Tin Nhiem Mang"></a>
+				<a href="//www.dmca.com/Protection/Status.aspx?ID=4f44c8e7-b645-4ddb-8aec-c130d0598c85" target="_blank" title="DMCA.com Protection Status" class="dmca-badge">
+					<img class="lazyload" data-src="https://images.dmca.com/Badges/_dmca_premi_badge_4.png?ID=4f44c8e7-b645-4ddb-8aec-c130d0598c85" alt="DMCA.com Protection Status" />
+				</a>
+			</div>
+		</div>
+		<div class="footer__logo">
+			<p class="footer__logo-hd">Ghé thăm các website khác cùng tập đoàn MWG</p>
+			<ul class="footer__logo-list">
+				<li>
+					<a rel="nofollow" href="https://www.thegioididong.com/" target="_blank">
+						<i class="iconlogo-thegioididong"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.dienmayxanh.com/" target="_blank">
+						<i class="iconlogo-dienmayxanh"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.bachhoaxanh.com/" target="_blank">
+						<i class="iconlogo-bachhoaxanh"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.nhathuocankhang.com/" target="_blank" title="Chuỗi nhà thuốc chuẩn GPP">
+						<i class="iconlogo-ankhang"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://avakids.com/" target="_blank" title="Chuỗi cửa hàng mẹ và bé">
+						<i class="iconlogo-kids"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.avasport.com/" target="_blank" title="Chuỗi cửa hàng thể thao">
+						<i class="iconlogo-sport"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.dichvutantam.com/" target="_blank" title="Dịch vụ vệ sinh máy lạnh, sửa chữa điện nước, lắp đặt máy lạnh, máy giặt, tivi">
+						<i class="iconlogo-tantam"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.4kfarm.com/" target="_blank" title="Nông trại rau sạch">
+						<i class="iconlogo-4kfarm"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://vieclam.thegioididong.com/" target="_blank" title="Trang tuyển dụng của tập đoàn Thế Giới Di Động">
+						<i class="iconlogo-vieclam"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!-- endfooter -->
+</body>
+</html>

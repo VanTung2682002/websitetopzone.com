@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>TopZone - iPhone</title>
+	<link rel="stylesheet" href="css/iphone.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/home.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/web.css">
+	<script type="text/javascript">
+		$(function() {
+			var pull        = $('#pull');
+			menu        = $('nav ul');
+			menuHeight  = menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+		});
+
+		$(window).resize(function(){
+			var w = $(window).width();
+			if(w > 320 && menu.is(':hidden')) {
+				menu.removeAttr('style');
+			}
+		});
+	</script>
+</head>
+<body>    
+	<!-- header -->
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<div id="logo" class="col-md-3 col-sm-12 col-xs-12">
+					<h1>
+						<div class="logo-header"><a href="home.html"><img src="img/home/logo.png"></a>	</div>					
+						<nav><a id="pull" class="btn btn-danger" href="#">
+							<i class="fa fa-bars"></i>
+						</a></nav>			
+					</h1>
+				</div>
+				<div id="search" class="col-md-7 col-sm-12 col-xs-12">
+					<input type="text" name="text" value="Nhập từ khóa ...">
+					<script>
+						var nhaptukhoa = document.querySelector('input[value="Nhập từ khóa ..."]');
+						console.log([nhaptukhoa])
+						nhaptukhoa.onclick=function(){
+							nhaptukhoa.value="";
+						}
+						nhaptukhoa.onblur=function(){
+							nhaptukhoa.value="Nhập từ khóa ...";
+						}
+					</script>
+					<input type="submit" name="submit" value="Tìm Kiếm">
+				</div>
+				<div id="cart" class="col-md-2 col-sm-12 col-xs-12">
+					<a href="cart.html">2</a>		    
+				</div>
+			</div>			
+		</div>
+	</header><!-- /header -->
+	<!-- endheader -->
+
+	<!-- main -->
+	<section id="body">
+		<div class="container">
+			<div class="row">
+				<div id="sidebar" class="col-md-3">
+					<nav id="menu">
+						<ul>
+							<li class="menu-item">danh mục sản phẩm</li>
+							<li class="menu-item"><a href="category-iphone.html" title="">iPhone</a></li>
+							<li class="menu-item"><a href="category-mac.html" title="">Mac</a></li>
+							<li class="menu-item"><a href="category-ipad.html" title="">iPad</a></li>
+							<li class="menu-item"><a href="category-watch.html" title="">Watch</a></li>
+							<li class="menu-item"><a href="category-sound.html" title="">Âm thanh</a></li>
+							<li class="menu-item"><a href="category-accessory.html" title="">Phụ kiện</a></li>
+							<li class="menu-item"><a href="#" title="">TopCare</a></li>						
+						</ul>
+						<!-- <a href="#" id="pull">Danh mục</a> -->
+					</nav>
+
+					<!-- <div id="banner-l" class="text-center">
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-1.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-2.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-5.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-6.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-7.png" alt="" class="img-thumbnail"></a>
+						</div>
+					</div> -->
+				</div>
+
+				<div id="main" class="col-md-9">
+					<!-- main -->
+					<!-- phan slide la cac hieu ung chuyen dong su dung jquey -->
+					<div id="slider">
+						<div id="demo" class="carousel slide" data-ride="carousel">
+
+							<!-- Indicators -->
+							<ul class="carousel-indicators">
+								<li data-target="#demo" data-slide-to="0" class="active"></li>
+								<li data-target="#demo" data-slide-to="1"></li>
+								<li data-target="#demo" data-slide-to="2"></li>
+							</ul>
+
+							<!-- The slideshow -->
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="img/home/banner-l-1.png" alt="Los Angeles" >
+								</div>
+								<div class="carousel-item">
+									<img src="img/home/banner-l-2.png" alt="Chicago">
+								</div>
+								<div class="carousel-item">
+									<img src="img/home/banner-l-3.png" alt="New York" >
+								</div>
+							</div>
+
+							<!-- Left and right controls -->
+							<a class="carousel-control-prev" href="#demo" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</a>
+							<a class="carousel-control-next" href="#demo" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</a>
+						</div>
+					</div>
+
+					<div id="banner-t" class="text-center">
+						<div class="row">
+							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
+								<a href="#"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
+							</div>
+							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
+								<a href="#"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
+							</div>
+						</div>					
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				
+				<ul class="listing-cate">
+					<li class=" item ajaxed __cate_7077" data-index="1" data-id="289840" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="0" data-vehicle="1" data-productcode="0232391001988" data-pos="1">
+							<a href="/apple-watch/apple-watch-s8-lte-41mm-day-thep" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch S8 GPS + Cellular 41mm" data-id="289840" data-price="21990000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/289840/s16/apple-watch-s8-lte-41mm-day-thep-xam-thumbtz-650x650.png" alt="Apple Watch S8 LTE dây thép">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch S8 LTE dây thép" data-lstarranged="289840,289844">
+							<ul>
+									<li data-url="/apple-watch/apple-watch-s8-lte-41mm-day-thep" data-id="289840" data-index="0" class="merge__item item act">41mm</li>
+									<li data-url="/apple-watch/apple-watch-s8-lte-45mm-day-thep" data-id="289844" data-index="1" class="merge__item item ">45mm</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch S8 LTE dây thép        </h4>
+			
+							<strong class="price">21.990.000₫</strong>
+						<p class="item-txt-online ">Hàng sắp về</p>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_7077" data-index="2" data-id="289832" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="0" data-vehicle="1" data-productcode="0232391001985" data-pos="2">
+							<a href="/apple-watch/apple-watch-s8-lte-41mm-vien-thep" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch S8 GPS + Cellular 41mm" data-id="289832" data-price="20990000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/289832/s16/apple-watch-s8-lte-41mm-vien-thep-xanh-den-thumbtz-650x650.png" alt="Apple Watch S8 LTE viền thép">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch S8 LTE viền thép" data-lstarranged="289832,289836">
+							<ul>
+									<li data-url="/apple-watch/apple-watch-s8-lte-41mm-vien-thep" data-id="289832" data-index="0" class="merge__item item act">41mm</li>
+									<li data-url="/apple-watch/apple-watch-s8-lte-45mm-vien-thep" data-id="289836" data-index="1" class="merge__item item ">45mm</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch S8 LTE viền thép        </h4>
+			
+							<strong class="price">20.990.000₫</strong>
+						<p class="item-txt-online ">Hàng sắp về</p>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_7077" data-index="3" data-id="289818" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="0" data-vehicle="1" data-productcode="0232391001996" data-pos="3">
+							<a href="/apple-watch/apple-watch-ultra-cao-su" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch Ultra GPS + Cellular 49mm Ocean Band" data-id="289818" data-price="23990000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/289818/s16/apple-watch-s8-ultra-cao-su-vang-thumbtz-650x650.png" alt="Apple Watch Ultra">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch Ultra" data-lstarranged="289818,289821,289823">
+							<ul>
+									<li data-url="/apple-watch/apple-watch-ultra-cao-su" data-id="289818" data-index="0" class="merge__item item act">Dây cao su</li>
+									<li data-url="/apple-watch/apple-watch-ultra-trail-s" data-id="289821" data-index="1" class="merge__item item ">size S/M</li>
+									<li data-url="/apple-watch/apple-watch-ultra-trail-m" data-id="289823" data-index="2" class="merge__item item ">Dây vải Trail</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch Ultra        </h4>
+			
+							<strong class="price">23.990.000₫</strong>
+						<p class="item-txt-online ">Hàng sắp về</p>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_7077" data-index="4" data-id="289806" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="0" data-vehicle="1" data-productcode="0232391001975" data-pos="4">
+							<a href="/apple-watch/apple-watch-s8-lte-41mm" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch Series 8 GPS + Cellular 41mm" data-id="289806" data-price="14990000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/289806/s16/apple-watch-s8-lte-41mm-den-xanh-thumbttz-650x650.png" alt="Apple Watch S8 LTE">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch S8 LTE" data-lstarranged="289806,289825">
+							<ul>
+									<li data-url="/apple-watch/apple-watch-s8-lte-41mm" data-id="289806" data-index="0" class="merge__item item act">41mm</li>
+									<li data-url="/apple-watch/apple-watch-s8-lte-45mm" data-id="289825" data-index="1" class="merge__item item ">45mm</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch S8 LTE        </h4>
+			
+							<strong class="price">14.990.000₫</strong>
+						<p class="item-txt-online ">Hàng sắp về</p>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_7077" data-index="5" data-id="289804" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="0" data-vehicle="1" data-productcode="0232391001969" data-pos="5">
+							<a href="/apple-watch/apple-watch-s8-41mm" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch Series 8 GPS" data-id="289804" data-price="11990000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/289804/s16/apple-watch-s8-41mm-do-thumbtz-650x650.png" alt="Apple Watch S8 GPS">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch S8 GPS" data-lstarranged="289804,289610">
+							<ul>
+									<li data-url="/apple-watch/apple-watch-s8-41mm" data-id="289804" data-index="0" class="merge__item item act">41mm</li>
+									<li data-url="/apple-watch/apple-watch-s8" data-id="289610" data-index="1" class="merge__item item ">45mm</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch S8 GPS        </h4>
+			
+							<strong class="price">11.990.000₫</strong>
+						<p class="item-txt-online ">Hàng sắp về</p>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_7077" data-index="6" data-id="289799" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="0" data-vehicle="1" data-productcode="0232391001962" data-pos="6">
+							<a href="/apple-watch/apple-watch-se-2022-lte-40mm" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch SE 2022 LTE" data-id="289799" data-price="8990000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/289799/s16/apple-watch-se-2022-lte-40mm-den-xanh-thumbtz-650x650.png" alt="Apple Watch SE 2022 LTE">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch SE 2022 LTE" data-lstarranged="289799,289801">
+							<ul>
+									<li data-url="/apple-watch/apple-watch-se-2022-lte-40mm" data-id="289799" data-index="0" class="merge__item item act">40mm</li>
+									<li data-url="/apple-watch/apple-watch-se-2022-lte-44mm" data-id="289801" data-index="1" class="merge__item item ">44mm</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch SE 2022 LTE        </h4>
+			
+							<strong class="price">8.990.000₫</strong>
+						<p class="item-txt-online ">Hàng sắp về</p>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_7077" data-index="7" data-id="289612" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="0" data-vehicle="1" data-productcode="0232391001955" data-pos="7">
+							<a href="/apple-watch/apple-watch-se-2022" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch SE 2022 GPS" data-id="289612" data-price="7490000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/289612/s16/apple-watch-se-2022-gps-40mm-trang-kem-thumbtz-650x650.png" alt="Apple Watch SE 2022 GPS">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch SE 2022 GPS" data-lstarranged="289612,289798">
+							<ul>
+									<li data-url="/apple-watch/apple-watch-se-2022" data-id="289612" data-index="0" class="merge__item item act">40mm</li>
+									<li data-url="/apple-watch/apple-watch-se-2022-44mm-vien-nhom" data-id="289798" data-index="1" class="merge__item item ">44mm</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch SE 2022 GPS        </h4>
+			
+							<strong class="price">7.490.000₫</strong>
+						<p class="item-txt-online ">Hàng sắp về</p>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_7077" data-index="8" data-id="289611" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="0" data-vehicle="1" data-productcode="0232391001998" data-pos="8">
+							<a href="/apple-watch/apple-watch-ultra-alpine-size-s" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch Ultra GPS + Cellular 49mm Alpine Loop" data-id="289611" data-price="23990000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/289611/s16/apple-watch-s8-ultra-alpine-size-s-thumbtz-650x650.png" alt="Apple Watch Ultra đại diện">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch Ultra đại diện" data-lstarranged="289611,289817,289814">
+							<ul>
+									<li data-url="/apple-watch/apple-watch-ultra-alpine-size-s" data-id="289611" data-index="0" class="merge__item item act">size S</li>
+									<li data-url="/apple-watch/apple-watch-ultra-size-l" data-id="289817" data-index="1" class="merge__item item ">size L</li>
+									<li data-url="/apple-watch/apple-watch-ultra-size-m" data-id="289814" data-index="2" class="merge__item item ">Dây vải Alpine</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch Ultra đại diện        </h4>
+			
+							<strong class="price">23.990.000₫</strong>
+						<p class="item-txt-online ">Hàng sắp về</p>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_7077" data-index="9" data-id="266360" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="1" data-vehicle="1" data-productcode="0232391001738" data-pos="9">
+							<a href="/apple-watch/apple-watch-nike-series-7-gps-cellular-41mm" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch Nike Series 7 GPS + Cellular 41mm" data-id="266360" data-price="12990000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_7077">
+							<img class="thumb lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/7077/266360/s16/apple-watch-nike-series-7-gps-cellular-41mm-650x650.png" alt="Apple Watch Nike Series 7 GPS + Cellular 41mm" src="https://cdn.tgdd.vn/Products/Images/7077/266360/s16/apple-watch-nike-series-7-gps-cellular-41mm-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			Apple Watch Nike Series 7 GPS + Cellular 41mm        </h4>
+			
+							<div class="box-p">
+								<strong class="price">12.990.000₫</strong>
+								<p class="price-old black">14.990.000₫</p>
+									<span class="percent">-13%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_7077" data-index="10" data-id="254326" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="1" data-vehicle="1" data-productcode="0232391001725" data-pos="10">
+							<a href="/apple-watch/apple-nike-series-7-gps-41mm" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch Nike Series 7 GPS" data-id="254326" data-price="9990000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_7077">
+							<img class="lazyload thumb" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/7077/254326/s16/apple-watch-series-7-gps-41mm-trang-650x650.png" alt="Apple Watch Nike Series 7 GPS 41mm">
+						</div>
+			
+			
+			
+					<h4>
+			Apple Watch Nike Series 7 GPS 41mm        </h4>
+			
+							<div class="box-p">
+								<strong class="price">9.990.000₫</strong>
+								<p class="price-old black">11.990.000₫</p>
+									<span class="percent">-16%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_7077" data-index="11" data-id="250651" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="1" data-vehicle="1" data-productcode="0232391001696" data-pos="11">
+							<a href="/apple-watch/apple-watch-s7-lte-41mm-day-thep" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch Series 7 GPS + Cellular" data-id="250651" data-price="18490000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/250651/s16/apple-watch-s7-lte-41mm-vien-thep-2-650x650.png" alt="Apple Watch Series 7 GPS + Cellular">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch Series 7 GPS + Cellular" data-lstarranged="250651,250656">
+							<ul>
+									<li data-url="/apple-watch/apple-watch-s7-lte-41mm-day-thep" data-id="250651" data-index="0" class="merge__item item act">41mm</li>
+									<li data-url="/apple-watch/apple-watch-s7-lte-45mm-day-thep" data-id="250656" data-index="1" class="merge__item item ">45mm</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch Series 7 GPS + Cellular        </h4>
+			
+							<div class="box-p">
+								<strong class="price">18.490.000₫</strong>
+								<p class="price-old black">20.990.000₫</p>
+									<span class="percent">-11%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_7077" data-index="12" data-id="252283" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="1" data-vehicle="1" data-productcode="0232391001779" data-pos="12">
+							<a href="/apple-watch/apple-watch-series-7-lte-41mm-vien-thep" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch Series 7 GPS + Cellular" data-id="252283" data-price="20990000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/252283/s16/apple-watch-s7-lte-41mm-vien-vang-thumbtz-1-650x650.png" alt="Apple Watch Series 7 GPS + Cellular">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch Series 7 GPS + Cellular" data-lstarranged="252283,252284">
+							<ul>
+									<li data-url="/apple-watch/apple-watch-series-7-lte-41mm-vien-thep" data-id="252283" data-index="0" class="merge__item item act">41mm</li>
+									<li data-url="/apple-watch/apple-watch-series-7-lte-45mm-vien-thep" data-id="252284" data-index="1" class="merge__item item ">45mm</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch Series 7 GPS + Cellular        </h4>
+			
+							<strong class="price">20.990.000₫</strong>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_7077" data-index="13" data-id="234917" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="1" data-vehicle="1" data-productcode="0232391001545" data-pos="13">
+							<a href="/apple-watch/s6-lte-40mm-vien-thep-day-cao-su" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch Series 6 GPS + Cellular" data-id="234917" data-price="16490000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_7077">
+							<img class="thumb" width="235" height="235" src="https://cdn.tgdd.vn/Products/Images/7077/234917/s16/apple-watch-s6-lte-40mm-xanh-la-650x650.png" alt="Apple Watch Series 6 GPS + Cellular">
+						</div>
+			
+			
+			
+						<div class="prods-group" data-mergename="Apple Watch Series 6 GPS + Cellular" data-lstarranged="234917,239477">
+							<ul>
+									<li data-url="/apple-watch/s6-lte-40mm-vien-thep-day-cao-su" data-id="234917" data-index="0" class="merge__item item act">40mm</li>
+									<li data-url="/apple-watch/s6-lte-44mm-vien-thep-day-cao-su" data-id="239477" data-index="1" class="merge__item item ">44mm</li>
+							</ul>
+						</div>
+					<h4>
+			Apple Watch Series 6 GPS + Cellular        </h4>
+			
+							<div class="box-p">
+								<strong class="price">16.490.000₫</strong>
+								<p class="price-old black">16.990.000₫</p>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_7077" data-index="14" data-id="229030" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="1" data-vehicle="1" data-productcode="0232391001548" data-pos="14">
+							<a href="/apple-watch/apple-watch-s6-lte-40mm-vien-thep-day-thep" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch Series 6 GPS + Cellular" data-id="229030" data-price="17490000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_7077">
+							<img class="lazyload thumb" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/7077/229030/s16/apple-watch-series-6-lte-40mm-1-650x650.png" alt="Apple Watch Series 6 GPS + Cellular 40mm">
+						</div>
+			
+			
+			
+					<h4>
+			Apple Watch Series 6 GPS + Cellular 40mm        </h4>
+			
+							<div class="box-p">
+								<strong class="price">17.490.000₫</strong>
+								<p class="price-old black">17.990.000₫</p>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_7077" data-index="15" data-id="229059" data-issetup="0" data-maingroup="23" data-subgroup="2391" data-type="1" data-vehicle="1" data-productcode="0232391001533" data-pos="15">
+							<a href="/apple-watch/apple-watch-se-lte-44mm-vien-nhom-day-cao-su" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Apple Watch SE GPS + Cellular" data-id="229059" data-price="9790000.0" data-brand="Apple" data-cate="Watch" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_7077">
+							<img class="lazyload thumb" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/7077/229059/s16/apple-watch-se-lte-44mm-1-650x650.png" alt="Apple Watch SE GPS + Cellular 44mm">
+						</div>
+			
+			
+			
+					<h4>
+			Apple Watch SE GPS + Cellular 44mm        </h4>
+			
+							<div class="box-p">
+								<strong class="price">9.790.000₫</strong>
+								<p class="price-old black">11.990.000₫</p>
+									<span class="percent">-18%</span>
+							</div>
+				</a>
+			
+					</li>
+						</ul>
+				<!-- end main -->
+			</div>
+		</div>
+	</section>
+	<!-- endmain -->
+
+	<!-- footer -->
+	<footer>
+		<div class="foot">
+			<div class="logo-foot">
+				<a href="/">
+					<i class="topzone-logo"></i>
+				</a>
+				<a href="/tekzone/khac-biet-aar-va-apr-tieu-chuan-cua-hang-uy-quyen-apple-1411356">
+					<i class="topzone-autho"></i>
+				</a>
+			</div>
+			<ul class="list-foot">
+				<li>
+						<span>Tổng đài</span>
+					<a href="tel:1900969642">
+						<span>Mua hàng:</span>
+						<b>1900.9696.42</b> (7:30 - 22:00)
+					</a>
+					<a href="tel:1900986843">
+						<span>CSKH:</span>
+						<b>1900.9868.43</b> (8:00 - 21:30)
+					</a>
+					<a href="tel:1900866854">
+						<span>Kỹ thuật:</span>
+						<b>1900.8668.54</b> (7:30 - 22:00)
+					</a>
+	
+					<div class="footer-social">
+						<p class="txt">Kết nối với chúng tôi</p>
+						<a href="https://www.facebook.com/topzone.vn" target="_blank" class="link-social">
+							<i class="iconsocial-facebook"></i>
+						</a>
+						<a href="https://www.youtube.com/channel/UCoWdPNr8jSr7JM0OFlKvQHw" target="_blank" class="link-social">
+							<i class="iconsocial-youtube"></i>
+						</a>
+						<a href="https://zalo.me/2040551312124557463" target="_blank" class="link-social">
+							<i class="iconsocial-zalo"></i>
+						</a>
+					</div>
+					
+				</li>
+				<li>
+					<span>Hệ thống cửa hàng</span>
+					<a href="/he-thong-cua-hang">
+						Xem 78 cửa hàng 
+					</a>
+					<a href="/noi-quy-cua-hang">
+						Nội quy cửa hàng
+					</a>
+					<a href="/chat-luong-phuc-vu">
+						Chất lượng phục vụ
+					</a>
+					<a href="/bao-hanh-doi-tra">
+						Chính sách bảo hành & đổi trả
+					</a>
+				</li>
+				<li>
+					<span>Hỗ trợ khách hàng</span>
+					<a href="/dieu-kien-giao-dich">
+						Điều kiện giao dịch chung
+					</a>
+					<a href="/huong-dan-mua-hang">
+						Hướng dẫn mua hàng online
+					</a>
+					<a href="/giao-hang">
+						Chính sách giao hàng
+					</a>
+					<a href="/thanh-toan">
+						Hướng dẫn thanh toán
+					</a>
+				</li>
+				<li>
+					<span>Về thương hiệu TopZone</span>
+	
+					<a href="/tekzone/chuong-trinh-tich-diem-sieu-khung-qua-ung-dung-qua-tang-vip-1435360" class="color-link" style="color:#e5e5e5!important;">
+						Tích điểm Quà tặng VIP
+					</a>
+					<a href="/gioi-thieu">
+						Giới thiệu TopZone
+					</a>
+					<a href="https://www.thegioididong.com/b2b">
+						Bán hàng doanh nghiệp
+					</a>
+					<a href="/bao-mat-thong-tin">
+						Chính sách bảo mật thông tin
+					</a>
+					<a rel="nofollow" href="https://www.topzone.vn/?sclient=mobile">Xem bản mobile</a>
+				</li>
+					<li>
+						<span>Trung tâm bảo hành TopCare</span>
+						<a href="/topcare">
+							Giới thiệu TopCare
+						</a>
+					</li>
+			</ul>
+			<div class="text-cpr">
+				<p>
+					© 2018. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. <br />
+					Địa chỉ: 128 Trần Quang Khải, P. Tân Định, Q.1, TP. Hồ Chí Minh. Điện thoại: 028 38125960. 
+				</p>
+			</div>
+			<div class="certify">
+				<a href="http://online.gov.vn/Home/WebDetails/88735" target="_blank"><img class="lazyload" data-src="//cdn.tgdd.vn/mwgcart/topzone/images/certify-bct.png" width="127" /></a>
+				<a href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/topzonevn-1635823490" title="Chung nhan Tin Nhiem Mang" target="_blank"><img class="lazyload" data-src="https://tinnhiemmang.vn/handle_cert?id=topzone.vn" width="150" alt="Chung nhan Tin Nhiem Mang"></a>
+				<a href="//www.dmca.com/Protection/Status.aspx?ID=4f44c8e7-b645-4ddb-8aec-c130d0598c85" target="_blank" title="DMCA.com Protection Status" class="dmca-badge">
+					<img class="lazyload" data-src="https://images.dmca.com/Badges/_dmca_premi_badge_4.png?ID=4f44c8e7-b645-4ddb-8aec-c130d0598c85" alt="DMCA.com Protection Status" />
+				</a>
+			</div>
+		</div>
+		<div class="footer__logo">
+			<p class="footer__logo-hd">Ghé thăm các website khác cùng tập đoàn MWG</p>
+			<ul class="footer__logo-list">
+				<li>
+					<a rel="nofollow" href="https://www.thegioididong.com/" target="_blank">
+						<i class="iconlogo-thegioididong"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.dienmayxanh.com/" target="_blank">
+						<i class="iconlogo-dienmayxanh"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.bachhoaxanh.com/" target="_blank">
+						<i class="iconlogo-bachhoaxanh"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.nhathuocankhang.com/" target="_blank" title="Chuỗi nhà thuốc chuẩn GPP">
+						<i class="iconlogo-ankhang"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://avakids.com/" target="_blank" title="Chuỗi cửa hàng mẹ và bé">
+						<i class="iconlogo-kids"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.avasport.com/" target="_blank" title="Chuỗi cửa hàng thể thao">
+						<i class="iconlogo-sport"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.dichvutantam.com/" target="_blank" title="Dịch vụ vệ sinh máy lạnh, sửa chữa điện nước, lắp đặt máy lạnh, máy giặt, tivi">
+						<i class="iconlogo-tantam"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.4kfarm.com/" target="_blank" title="Nông trại rau sạch">
+						<i class="iconlogo-4kfarm"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://vieclam.thegioididong.com/" target="_blank" title="Trang tuyển dụng của tập đoàn Thế Giới Di Động">
+						<i class="iconlogo-vieclam"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!-- endfooter -->
+</body>
+</html>

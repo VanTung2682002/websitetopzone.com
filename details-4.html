@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>TopZone - Product</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/ip13-prm.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/web.css">
+	<style>
+		.logo-header{
+			margin-top: 8px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			var pull        = $('#pull');
+			menu        = $('nav ul');
+			menuHeight  = menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+		});
+
+		$(window).resize(function(){
+			var w = $(window).width();
+			if(w > 320 && menu.is(':hidden')) {
+				menu.removeAttr('style');
+			}
+		});
+	</script>
+</head>
+<body>    
+	<!-- header -->
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<div id="logo" class="col-md-3 col-sm-12 col-xs-12">
+					<h1>
+						<div class="logo-header"><a href="home.html"><img src="img/home/logo.png"></a>	</div>					
+						<nav><a id="pull" class="btn btn-danger" href="#">
+							<i class="fa fa-bars"></i>
+						</a></nav>			
+					</h1>
+				</div>
+				<div id="search" class="col-md-7 col-sm-12 col-xs-12">
+					<input type="text" name="text" value="Nhập từ khóa ...">
+					<script>
+						var nhaptukhoa = document.querySelector('input[value="Nhập từ khóa ..."]');
+						console.log([nhaptukhoa])
+						nhaptukhoa.onclick=function(){
+							nhaptukhoa.value="";
+						}
+						nhaptukhoa.onblur=function(){
+							nhaptukhoa.value="Nhập từ khóa ...";
+						}
+					</script>
+					<input type="submit" name="submit" value="Tìm Kiếm">
+				</div>
+				<div id="cart" class="col-md-2 col-sm-12 col-xs-12">
+					<a href="cart.html">2</a>		    
+				</div>
+			</div>			
+		</div>
+	</header><!-- /header -->
+	<!-- endheader -->
+
+	<!-- main -->
+	<section id="body">
+		<div class="container">
+			<div class="row">
+				<div id="sidebar" class="col-md-3">
+					<nav id="menu">
+						<ul>
+							<li class="menu-item">danh mục sản phẩm</li>
+							<li class="menu-item"><a href="category-iphone.html" title="">iPhone</a></li>
+							<li class="menu-item"><a href="category-mac.html" title="">Mac</a></li>
+							<li class="menu-item"><a href="category-ipad.html" title="">iPad</a></li>
+							<li class="menu-item"><a href="category-watch.html" title="">Watch</a></li>
+							<li class="menu-item"><a href="category-sound.html" title="">Âm thanh</a></li>
+							<li class="menu-item"><a href="category-accessory.html" title="">Phụ kiện</a></li>
+							<li class="menu-item"><a href="#" title="">TopCare</a></li>						
+						</ul>
+						<!-- <a href="#" id="pull">Danh mục</a> -->
+					</nav>
+
+					<!-- <div id="banner-l" class="text-center">
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-1.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-2.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-5.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-6.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-7.png" alt="" class="img-thumbnail"></a>
+						</div>
+					</div> -->
+				</div>
+
+				<div id="main" class="col-md-9">
+					<!-- main -->
+					<!-- phan slide la cac hieu ung chuyen dong su dung jquey -->
+					<div id="slider">
+						<div id="demo" class="carousel slide" data-ride="carousel">
+
+							<!-- Indicators -->
+							<ul class="carousel-indicators">
+								<li data-target="#demo" data-slide-to="0" class="active"></li>
+								<li data-target="#demo" data-slide-to="1"></li>
+								<li data-target="#demo" data-slide-to="2"></li>
+							</ul>
+
+							<!-- The slideshow -->
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="img/home/banner-l-1.png" alt="Los Angeles" >
+								</div>
+								<div class="carousel-item">
+									<img src="img/home/banner-l-2.png" alt="Chicago">
+								</div>
+								<div class="carousel-item">
+									<img src="img/home/banner-l-3.png" alt="New York" >
+								</div>
+							</div>
+
+							<!-- Left and right controls -->
+							<a class="carousel-control-prev" href="#demo" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</a>
+							<a class="carousel-control-next" href="#demo" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</a>
+						</div>
+					</div>
+
+					<div id="banner-t" class="text-center">
+						<div class="row">
+							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
+								<a href="#"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
+							</div>
+							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
+								<a href="#"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
+							</div>
+						</div>					
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				
+				<div id="wrap-inner">
+					<div id="product-info">
+						<div class="clearfix"></div>
+						<div class="row">
+							<div id="product-img" class="col-xs-12 col-sm-12 col-md-6 text-center">
+								<img class="img-product" src="img/home/product-4.png">
+							</div>
+							<!-- <div id="product-details" class="col-xs-12 col-sm-12 col-md-9">
+								<p>Thông số :</p>
+								<p>Màn hình : OLED, 6.7", Super Retina,  XDR</p>
+								<p>Hệ điều hành : iOS 16</p>
+								<p>Camera sau : Chính 48 MP & Phụ 12 MP, 12 MP</p>
+								<p>Camera trước : 12 MP</p>
+								<p>Chip : Apple A16 Bionic 6 nhân</p>
+								<p>Dung lượng lưu trữ : 128 GB</p>
+								<p>Bộ nhớ trong : 128 GB, 256 GB, 512 GB, 1 TB</p>
+								<p>Giá: <span class="price">10.000.000</span></p>
+								<p>Bảo hành: 1 đổi 1 trong 12 tháng</p> 
+								<p>Phụ kiện: Dây cáp sạc, tai nghe</p>
+								<p>Tình trạng: Máy mới 100%</p>
+								<p>Khuyến mại: Hỗ trợ trả góp 0% dành cho các chủ thẻ Ngân hàng Sacombank</p>
+								<p>Còn hàng: Còn hàng</p>
+								<p class="add-cart text-center"><a href="#">Đặt hàng online</a></p>
+							</div> -->
+							<aside class="col-xs-12 col-sm-12 col-md-6">
+								<h1 class="name-product">iPhone 14 Plus</h1>
+								<div class="price-promo-local">
+									<span>Giá và khuyến mãi tại: Hồ Chí Minh</span>
+								
+										<div class="store-province">
+											<div class="SearchContainer">
+												<input id="SearchProvince" placeholder="Tìm theo tỉnh thành">
+												<i class="topzone-search"></i>
+											</div>
+											<ul class="Provinces">
+													<li class="Item active">
+														<a href="javascript:locationConfirm(3)">Hồ Chí Minh</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(5)">Hà Nội</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(9)">Đà Nẵng</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(82)">An Giang</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(102)">Bà Rịa - Vũng Tàu</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(106)">Bắc Ninh</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(107)">Bến Tre</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(108)">Bình Định</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(109)">Bình Dương</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(110)">Bình Phước</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(111)">Bình Thuận</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(81)">Cà Mau</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(7)">Cần Thơ</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(6)">Đắk Lắk</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(114)">Điện Biên</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(8)">Đồng Nai</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(116)">Gia Lai</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(120)">Hà Tĩnh</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(101)">Hải Phòng</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(124)">Hưng Yên</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(125)">Khánh Hòa</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(126)">Kiên Giang</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(131)">Lào Cai</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(132)">Long An</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(133)">Nam Định</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(134)">Nghệ An</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(136)">Ninh Thuận</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(140)">Quảng Nam</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(142)">Quảng Ninh</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(143)">Quảng Trị</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(146)">Tây Ninh</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(148)">Thái Nguyên</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(151)">Tiền Giang</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(154)">Vĩnh Long</a>
+													</li>
+													<li class="Item ">
+														<a href="javascript:locationConfirm(155)">Vĩnh Phúc</a>
+													</li>
+											</ul>
+										</div>
+								</div>
+									<strong class="price" data-price="33990000" data-disprice="26990000" data-percent="20">
+										27.990.000₫ *          
+									</strong>
+									<div class="capacity">
+											<span>Dung lượng</span>
+										<ul>
+												<li class="active">
+													<a href="/iphone/iphone-13-pro-max">
+														128GB
+													</a>
+												</li>
+												<li class="">
+													<a href="/iphone/iphone-13-pro-max-256gb">
+														256GB
+													</a>
+												</li>
+												<li class="">
+													<a href="/iphone/iphone-13-pro-max-512gb">
+														512GB
+													</a>
+												</li>
+												<li class="">
+													<a href="/iphone/iphone-13-pro-max-1tb">
+														1TB
+													</a>
+												</li>
+										</ul>
+									</div>
+								
+									
+										<div class="color-sp">
+												<span>Màu: Vàng đồng</span>
+											<ul>
+													<li class="active" data-idx="16" data-color="16" data-type="2" data-code="0131491002662" data-name="Màu: Vàng đồng">
+															<a href="javascript:;" style="background-color:#fae7cf"></a>
+													</li>
+													<li class="" data-idx="6" data-color="6" data-type="2" data-code="0131491002650" data-name="Màu: Xám">
+															<a href="javascript:;" style="background-color:#54524f"></a>
+													</li>
+													<li class="" data-idx="5" data-color="5" data-type="2" data-code="0131491002663" data-name="Màu: Bạc">
+															<a href="javascript:;" style="background-color:#f1f2ed"></a>
+													</li>
+													<li class="" data-idx="4" data-color="4" data-type="2" data-code="0131491002664" data-name="Màu: Xanh Dương">
+															<a href="javascript:;" style="background-color:#a7c1d9"></a>
+													</li>
+													<li class="" data-idx="7" data-color="7" data-type="2" data-code="0131491003088" data-name="Màu: Xanh lá">
+															<a href="javascript:;" style="background-color:#576856"></a>
+													</li>
+											</ul>
+										</div>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+										<div id="promotion-detail" class="box-promo nomal">
+											<span>Khuyến mãi </span>
+													<small>Giá và khuyến mãi dự kiến áp dụng đến 23:00 | 31/10</small>
+											<div class="content-promo">
+											<p data-promotion="1257094" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="9700">
+												<i></i>
+												<b>Thu cũ Đổi mới: Giảm đến 1.5 triệu (Tuỳ model máy cũ, không áp dụng kèm giảm giá qua cổng thanh toán) <a href="https://www.topzone.vn/tekzone/topzone-iphone-ipad-giam-khi-tham-gia-thu-cu-doi-moi-1417401"> Xem chi tiết</a></b>
+											</p>
+											<p data-promotion="1254930" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="5000">
+												<i></i>
+												<b>Giảm giá 35% iPad (Tuỳ model) khi mua kèm iPhone (Không kèm khuyến mãi khác của iPad) <a href="https://www.topzone.vn/tekzone/ipad-12-9-inch-2021-giam-gia-khi-mua-kem-iphone-13-1436134"> Xem chi tiết</a><br></b>
+											</p>
+											<p data-promotion="1251275" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="5000">
+												<i></i>
+												<b>Giảm giá 35% iPad Pro M1 12.9" 2021 (tuỳ phiên bản) khi mua kèm iPhone (Không kèm khuyến mãi khác của iPad) <a href="https://www.topzone.vn/tekzone/ipad-12-9-inch-2021-giam-gia-khi-mua-kem-iphone-13-1436134"> Xem chi tiết</a><br></b>
+											</p>
+											<p data-promotion="1251278" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="1000">
+												<i></i>
+												<b>Phụ kiện chính hãng Apple giảm 30% khi mua kèm iPhone <a href="https://www.topzone.vn/topnews/ruoc-iphone-13-series-nhan-lien-uu-dai-giam-soc-1391646"> Xem chi tiết</a></b>
+											</p>
+											<p data-promotion="1253067" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="0">
+												<i></i>
+												<b>Giảm 50% gói Bảo hiểm rơi vỡ 6 tháng <a href="https://www.topzone.vn/tekzone/giam-gia-goi-bao-hiem-roi-vo-khi-mua-kem-iphone-ipad-tai-topzone-1451312?clearcache=1" target="_blank">(click xem chi tiết)</a></b>
+											</p>
+											<p data-promotion="1250548" data-group="WebNote" data-discount="0" data-productcode="" data-tovalue="0">
+												<i></i>
+												<b>Nhập mã SPPMWG giảm 10% tối đa 100.000đ khi thanh toán qua Ví ShopeePay <a href="https://www.topzone.vn/tekzone/nhap-ma-sppmwg-giam-10-toi-da-100-000d-khi-thanh-toan-qua-shopeepay-1451072"> (click xem chi tiết)</a></b>
+											</p>
+											</div>
+								
+											
+											<p class="text"><em class="note">(*)</em> Giá hoặc khuyến mãi không áp dụng trả góp lãi suất đặc biệt (0%, 0.5%, 1%)</p>
+								 
+								
+											
+								
+										</div>
+								
+								
+								
+										<span class="check-goods"><i class="topzone-box"></i>Xem TopZone có hàng</span>
+								
+								
+									<div class="campaign c2 dt">
+										<b>Ưu đãi khi thanh toán</b>
+										<div class="sliderX">
+												<div class="campaign-option" data-siteid="16" data-campaignname="VNPAYQR" onclick="ActiveOption($(this), '/cart/single?productId=230529&amp;productCode=0131491002662&amp;gtype=promotiongw&amp;transtype=37', 0)">
+													<figure class="vnpayqr">
+														<i></i>
+														<img src="//cdn.tgdd.vn/mwgcart/topzone/images/logo/vnpay.png">
+													</figure>
+														<b>Giảm <b>300.000₫</b></b>
+														<span>Sản phẩm iPhone</span>
+								
+														<div>
+																<i onmouseover="ShowRuleCampaign($(this), 'vnpayqr')" onmouseout="HideRuleCampaign($(this))">?</i>
+								
+															<div id="vnpayqr">- Nhập mã <strong>TAO300</strong> giảm thêm <strong>300.000₫</strong> khi thanh toán bằng quét QRCode qua App của các ngân hàng<br>
+								- Thời gian: 01/10 - 31/10/2022<br>
+								- Sản phẩm áp dụng: Tất cả sản phẩm<strong> IPHONE, IPAD.</strong><br>
+								- Các ngân hàng được áp dụng KM: Vietcombank, BIDV, VietinBank, Agribank, Nam A Bank, Eximbank, SCB, HDBank, ABBank, Vietbank, BIDC, SAIGONBANK, OceanBank, Public Bank Việt Nam, Bảo Việt Bank, Việt Á Bank, Co-opBank, Ngân hàng Chính sách xã hội (VBSP) và ví điện tử VNPAY.<br>
+								- Số lần khuyến mãi: Mỗi khách hàng (tương ứng với mỗi số tài khoản ngân hàng và/hoặc số điện thoại đăng ký dịch vụ mobile banking) được khuyến mại 01 (một lần)/tháng.</div>
+														</div>
+												</div>
+												<div class="campaign-option" data-siteid="16" data-campaignname="EXIMBANK" onclick="ActiveOption($(this), '/cart/single?productId=230529&amp;productCode=0131491002662&amp;gtype=promotiongw&amp;transtype=78', 3000000)">
+													<figure class="eximbank">
+														<i></i>
+														<img src="//cdn.tgdd.vn/mwgcart/topzone/images/logo/eximbank.jpg">
+													</figure>
+														<b>Giảm <b>500.000₫</b></b>
+														<span>Sản phẩm từ 3Tr</span>
+								
+														<div>
+																<i onmouseover="ShowRuleCampaign($(this), 'eximbank')" onmouseout="HideRuleCampaign($(this))">?</i>
+								
+															<div id="eximbank"><p>- Giảm 500.000đ cho sản phẩm 3.000.000đ trở lên khi thanh toán qua thẻ tín dụng EXIMBANK.</p>
+								<p>- Thời gian diễn ra chương trình : Từ ngày 15/06/2022 - 15/01/2023.</p>
+								<p>- Số suất khuyến mãi : <strong>1.250</strong> suất (Nếu hết suất thanh toán sẽ báo lỗi).</p>
+								<p>- Mỗi chủ thẻ được áp dụng 1 lần/chu kỳ.</p>
+								<p>- Không áp dụng trả góp qua thẻ tín dụng EXIMBANK.</p>
+								<p>- Không áp dụng kèm các khuyến mãi qua ngân hàng hoặc cổng thanh toán khách.</p>
+								<p>- Không áp dụng kèm mã giảm giá, coupon giảm giá.</p></div>
+														</div>
+														
+												</div>
+										</div>
+										<div class="crule hide"></div>
+									</div>
+									<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TN8PXHG"></script><script>
+										function ShowRuleCampaign($this, element) {
+											if ($this.hasClass('act')) {
+												$this.removeClass('act');
+												$('.crule').toggleClass('hide');
+											} else {
+												$('.crule').removeClass('hide');
+												$('.campaign>div>div>div>i.act').removeClass('act');
+												$this.toggleClass('act');
+											}
+								
+											$('.crule').html($('#' + element).html());
+										}
+										function HideRuleCampaign($this) {
+											$this.removeClass('act');
+											$('.crule').toggleClass('hide');
+										}
+										function CheckApply($this, url, min) {
+											var option = $this.parents('.campaign-option');
+											if ($('.choosepromo .label-radio.active').length>0 && min>0) {
+												var price = parseInt(33990000);
+												var discount = parseInt(7000000);
+												$('.choosepromo .label-radio.active').each(function () {
+													var $parent = $(this).parent();
+													var value = parseInt($parent.data('discount'));
+													if (value>0) {
+														discount += $parent.data('ispercent') == 'True' ? (value * price / 100) :value;
+													}
+												});
+								
+												if (price - discount < min) {
+													option.find('.cpopup').removeClass('hide');
+												} else {
+													window.location.href = url;
+												}
+											} else {
+													window.location.href = url;
+											}
+										}
+										function ActiveOption($this, url, min) {
+											var option = $this;
+											if (option.hasClass('active')) {
+												option.removeClass('active');
+												$('.btn-camp').remove();
+												$('.buy-sp .btn-buy').show();
+											}
+											else {
+												option.siblings().removeClass('active');
+												option.addClass('active');
+								
+												$('.buy-sp .btn-buy').hide();
+								
+												if ($('.btn-camp').length>0) {
+													$('.btn-camp').remove();
+												}
+								
+												var newButton = $('<a href="javascript:void(0)" class="btn-camp btn-buy full"></a>');
+												newButton.click(() => CheckApply($this, url, min))
+												newButton.text(`Mua ngay qua ${$this.data('campaignname')}`);
+												$('.buy-sp.normal').prepend(newButton);
+											}
+										}
+										function gtm_trakking(url) {
+											var obj = getModelTracking();
+											obj.orderType = "Mua ngay Vnpay";
+											var obj = getModelTracking();
+											if (url.indexOf("vnpayqr") != -1) {
+												obj.productPromoyionType = "Khuyến mãi thường";
+												obj.orderType = "Mua ngay Vnpay";
+											}
+											else {
+												if (url.indexOf("onepayjcb") != -1) {
+													obj.orderType = "Mua ngay Onepay JCB";
+												} else {
+													if (url.indexOf("fecredit") != -1) {
+														obj.orderType = "Mua ngay FeCredit";
+													}
+													else {
+														obj.orderType = "Mua ngay Tpbank";
+													}
+												}
+											}
+											gtm_ProductAddtoCart(obj);
+										}
+									</script>
+									<style>
+										.campaign.dt>div::-webkit-scrollbar {width:6px;height:6px;}
+										.campaign.dt>div::-webkit-scrollbar-track {border-radius:10px;background:rgba(255,255,255,0.3);}
+										.campaign.dt>div::-webkit-scrollbar-thumb {border-radius:10px;background:rgba(255,255,255,0.5);}
+										.campaign.dt>div::-webkit-scrollbar-thumb:hover {background:rgba(255,255,255,0.4);}
+										.campaign.dt>div::-webkit-scrollbar-thumb:active {background:rgba(255,255,255,.9);}
+										.campaign {margin-bottom:15px;padding-top:17px;border-top:1px solid #E0E0E0;white-space:nowrap;position:relative;}
+										.campaign>div.sliderX {display:flex;overflow-x:scroll;-webkit-overflow-scrolling:touch;-ms-scroll-chaining:chained;padding-bottom:6px;}
+										.campaign>b {display:block;margin-bottom:15px;font-size:16px;color:#fff;}
+										.campaign>div>div {min-width:calc(40% - 3px);display:inline-block;vertical-align:top;padding:10px 10px 8px;border:2px solid #fff;border-radius:12px;position:relative;flex-shrink:0;margin-right:5px;background-color:#fff;cursor:pointer;}
+										.campaign>div>div:last-of-type {margin-right:0;}
+										.campaign>div>div>* {display:block;margin-bottom:2px;}
+										.campaign>div>div>figure {height:16px;position:relative;margin-bottom:6px;}
+										.campaign>div>div>figure>img {max-height:100%;top:0;bottom:0;left:20px;margin:auto;position:absolute;}
+										.campaign>div>div>figure.jcb>img {height:15px;}
+										.campaign>div>div>figure.tpbank>img {height:13px;}
+										.campaign>div>div>figure.fecredit>img {height:8px;}
+										.campaign>div>div>figure.vnpayqr>img {height:10px;}
+										.campaign>div>div>figure.fundiin>img {height:15px;}
+										.campaign>div>div>b {color:#000;font-weight:400;}
+										.campaign>div>div>b>span {font-size:12px;color:#666;}
+										.campaign>div>div>span {font-size:12px;color:#666;}
+										.campaign>div>div>a {font-weight:400;color:#FB6E2E;margin-bottom:0;}
+										.campaign>div>div>div {width:16px;height:16px;position:absolute;right:10px;top:10px;}
+										.campaign>div>div>div>i {font-style:normal;width:16px;height:16px;border-radius:50%;display:block;background-color:#999;color:#fff;font-size:10px;text-align:center;line-height:16px;position:relative;cursor:pointer;}
+										.campaign>div>div>div>i.act {background-color:#2F80ED;}
+										.campaign>div>div>div>i.act:before {content:"";position:absolute;width:12px;height:12px;background:#e0e0e0;transform:rotate(45deg);top:15px;right:2px;box-shadow:-2px -2px 5px -4px;}
+										.campaign>div>div>div>div {display:none;}
+										.campaign div.crule {position:absolute;right:0;top:83px;padding:10px;border-radius:12px;width:100%;background-color:#fff;border:1px solid #E0E0E0;z-index:5;white-space:normal;line-height:1.5;box-shadow:0 0 8px #ccc;}
+										.campaign div.crule>* {margin-bottom:10px;color:#333;white-space:normal;}
+										.campaign .cpopup {position:fixed !important;left:0 !important;top:0 !important;width:100%;height:100vh;background:rgba(0,0,0,.85);z-index:10;}
+										.campaign .cpopup>div {width:320px;position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;background-color:#fff;border-radius:4px;padding:20px;line-height:1.5;text-align:center;height:105px;display:block;white-space:normal;}
+										.campaign .cpopup>div:before {content:"×";position:absolute;right:7px;top:-5px;font-size:26px;}
+										.campaign.dt.c1>div>div>a {float:right;}
+										.campaign.mb>div {overflow-x:scroll;-webkit-overflow-scrolling:touch;-ms-scroll-chaining:chained;}
+										.campaign.mb>div>div {min-width:calc(43% - 3px);}
+										.campaign.mb.c1>div>div>a {display:block;padding-top:2px;}
+										.campaign.c1>div>div {width:calc(100% - 3px);}
+										.campaign.c1>div>div>* {display:inline-block;vertical-align:middle;margin-right:2px;}
+										.campaign.c1>div>div>div {position:relative;left:0;top:0;}
+										.campaign.c1>div>div>figure.fecredit {height:20px;}
+										.campaign.c1>div>div>figure>img {position:relative;left:0;display:inline-block;vertical-align:middle;}
+										.campaign.c1>div>div>figure>i {vertical-align:middle;}
+										.campaign.c2>div>div {width:calc((100% / 2) - 3px);}
+										.campaign.c2 .sliderX::-webkit-scrollbar, .campaign.c1 .sliderX::-webkit-scrollbar {display:none;}
+										.campaign.c2 .sliderX {justify-content:center;} 
+										.campaign:not(.c1) .sliderX>div>b>span:last-of-type {display:block;}
+										.campaign-option>figure>i {width:16px;height:16px;border-radius:50%;padding:3px;border:1px solid #2F80ED;display:inline-block;font-size:16px;cursor:pointer;}
+										.campaign-option.active {border:2px solid #2F80ED;}
+										.campaign-option.active>figure>i::before {content:"";display:block;height:100%;background-color:#2F80ED;border-radius:50%;}
+									</style>
+								
+								
+									<div class="buy-sp normal has-threebtn">
+								
+											<a href="javascript:void(0)" onclick="BuyNow($(this))" class="btn-buy full">
+												Mua ngay
+											</a>
+											<a href="/tra-gop/tai-chinh/iphone/iphone-13-pro-max?productCode=0131491002662" class="btn-ins pay-taichinh has-another-pay">
+												Mua trả góp 0%
+												<span>Qua công ty tài chính</span>
+											</a>
+											<a href="/tra-gop/the/iphone/iphone-13-pro-max?productCode=0131491002662" class="btn-ins pay-nganluong has-another-pay">
+												Trả góp 0% qua thẻ
+												<span>Visa, Mastercard, JCB, Amex</span>
+											</a>
+									</div>
+										<div class="btn-area clearfix"></div>
+									<div class="popup-error">
+										<div>
+											<a href="javascript:void(0)" class="pe-close">×</a>
+											<div></div>
+											<a href="/cart" class="pe-btn">Kiểm tra giỏ hàng</a>
+											<a href="javascript:void(0)" class="pe-btn btn-confirm">Đồng ý</a>
+										</div>
+									</div>
+								
+								
+								
+									<ul class="policy">
+											<li>
+												<span>
+													<i class="topzone-boxtskt"></i>
+													Bộ sản phẩm gồm: Hộp, Sách hướng dẫn, Cây lấy sim, Cáp Lightning - Type C
+												</span>
+											</li>
+											<li>
+												<span>
+													<i class="topzone-doitra"></i>
+													Hư gì đổi nấy <b>12 tháng</b> tại 3416 siêu thị trên toàn quốc <a href="https://www.topzone.vn/bao-hanh-doi-tra"> Xem chi tiết chính sách bảo hành, đổi trả </a>
+												</span>
+											</li>
+											<li>
+												<span>
+													<i class="topzone-baohanhpolicy"></i>
+													Bảo hành chính hãng 1 năm
+												</span>
+											</li>
+											<li>
+												<span>
+													<i class="topzone-giaohang"></i>
+													Giao hàng nhanh toàn quốc <a href="/giao-hang">Xem chi tiết</a>
+												</span>
+											</li>
+											<li>
+												<span>
+													<i class="topzone-tongdai"></i>
+													Tổng đài: <a href="tel:1900969642">1900.9696.42</a> (9h00 - 21h00 mỗi ngày)
+												</span>
+											</li>
+									</ul>
+								
+									</aside>
+						</div>							
+					</div>
+					<!-- <div id="product-detail">
+						<h3>Chi tiết sản phẩm</h3>
+						<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div id="comment">
+						<h3>Bình luận</h3>
+						<div class="col-md-9 comment">
+							<form>
+								<div class="form-group">
+									<label for="email">Email:</label>
+									<input required type="email" class="form-control" id="email" name="email">
+								</div>
+								<div class="form-group">
+									<label for="name">Tên:</label>
+									<input required type="text" class="form-control" id="name" name="name">
+								</div>
+								<div class="form-group">
+									<label for="cm">Bình luận:</label>
+									<textarea required rows="10" id="cm" class="form-control" name="content"></textarea>
+								</div>
+								<div class="form-group text-right">
+									<button type="submit" class="btn btn-default">Gửi</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div id="comment-list">
+						<ul>
+							<li class="com-title">
+								TopZone
+								<br>
+								<span>2022-19-01 10:00:00</span>	
+							</li>
+							<li class="com-details">
+								HTC One X 32GB là sản phẩm đáng chờ đợi nhất trong năm nay, với cấu hình mạnh và giá thành tương đối mềm so với các dòng Smart Phone của các hãng khác
+							</li>
+						</ul>
+						<ul>
+							<li class="com-title">
+								TopZone
+								<br>
+								<span>2022-19-01 10:00:00</span>	
+							</li>
+							<li class="com-details">
+								HTC One X 32GB là sản phẩm đáng chờ đợi nhất trong năm nay, với cấu hình mạnh và giá thành tương đối mềm so với các dòng Smart Phone của các hãng khác
+							</li>
+						</ul>
+						<ul>
+							<li class="com-title">
+								TopZone
+								<br>
+								<span>2022-19-01 10:00:00</span>	
+							</li>
+							<li class="com-details">
+								HTC One X 32GB là sản phẩm đáng chờ đợi nhất trong năm nay, với cấu hình mạnh và giá thành tương đối mềm so với các dòng Smart Phone của các hãng khác
+							</li>
+						</ul>
+					</div> -->
+				</div>
+				
+				<!-- end main -->
+			</div>
+		</div>
+	</section>
+	<!-- endmain -->
+
+	<!-- footer -->
+	<footer>
+		<div class="foot">
+			<div class="logo-foot">
+				<a href="/">
+					<i class="topzone-logo"></i>
+				</a>
+				<a href="/tekzone/khac-biet-aar-va-apr-tieu-chuan-cua-hang-uy-quyen-apple-1411356">
+					<i class="topzone-autho"></i>
+				</a>
+			</div>
+			<ul class="list-foot">
+				<li>
+						<span>Tổng đài</span>
+					<a href="tel:1900969642">
+						<span>Mua hàng:</span>
+						<b>1900.9696.42</b> (7:30 - 22:00)
+					</a>
+					<a href="tel:1900986843">
+						<span>CSKH:</span>
+						<b>1900.9868.43</b> (8:00 - 21:30)
+					</a>
+					<a href="tel:1900866854">
+						<span>Kỹ thuật:</span>
+						<b>1900.8668.54</b> (7:30 - 22:00)
+					</a>
+	
+					<div class="footer-social">
+						<p class="txt">Kết nối với chúng tôi</p>
+						<a href="https://www.facebook.com/topzone.vn" target="_blank" class="link-social">
+							<i class="iconsocial-facebook"></i>
+						</a>
+						<a href="https://www.youtube.com/channel/UCoWdPNr8jSr7JM0OFlKvQHw" target="_blank" class="link-social">
+							<i class="iconsocial-youtube"></i>
+						</a>
+						<a href="https://zalo.me/2040551312124557463" target="_blank" class="link-social">
+							<i class="iconsocial-zalo"></i>
+						</a>
+					</div>
+					
+				</li>
+				<li>
+					<span>Hệ thống cửa hàng</span>
+					<a href="/he-thong-cua-hang">
+						Xem 78 cửa hàng 
+					</a>
+					<a href="/noi-quy-cua-hang">
+						Nội quy cửa hàng
+					</a>
+					<a href="/chat-luong-phuc-vu">
+						Chất lượng phục vụ
+					</a>
+					<a href="/bao-hanh-doi-tra">
+						Chính sách bảo hành & đổi trả
+					</a>
+				</li>
+				<li>
+					<span>Hỗ trợ khách hàng</span>
+					<a href="/dieu-kien-giao-dich">
+						Điều kiện giao dịch chung
+					</a>
+					<a href="/huong-dan-mua-hang">
+						Hướng dẫn mua hàng online
+					</a>
+					<a href="/giao-hang">
+						Chính sách giao hàng
+					</a>
+					<a href="/thanh-toan">
+						Hướng dẫn thanh toán
+					</a>
+				</li>
+				<li>
+					<span>Về thương hiệu TopZone</span>
+	
+					<a href="/tekzone/chuong-trinh-tich-diem-sieu-khung-qua-ung-dung-qua-tang-vip-1435360" class="color-link" style="color:#e5e5e5!important;">
+						Tích điểm Quà tặng VIP
+					</a>
+					<a href="/gioi-thieu">
+						Giới thiệu TopZone
+					</a>
+					<a href="https://www.thegioididong.com/b2b">
+						Bán hàng doanh nghiệp
+					</a>
+					<a href="/bao-mat-thong-tin">
+						Chính sách bảo mật thông tin
+					</a>
+					<a rel="nofollow" href="https://www.topzone.vn/?sclient=mobile">Xem bản mobile</a>
+				</li>
+					<li>
+						<span>Trung tâm bảo hành TopCare</span>
+						<a href="/topcare">
+							Giới thiệu TopCare
+						</a>
+					</li>
+			</ul>
+			<div class="text-cpr">
+				<p>
+					© 2018. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. <br />
+					Địa chỉ: 128 Trần Quang Khải, P. Tân Định, Q.1, TP. Hồ Chí Minh. Điện thoại: 028 38125960. 
+				</p>
+			</div>
+			<div class="certify">
+				<a href="http://online.gov.vn/Home/WebDetails/88735" target="_blank"><img class="lazyload" data-src="//cdn.tgdd.vn/mwgcart/topzone/images/certify-bct.png" width="127" /></a>
+				<a href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/topzonevn-1635823490" title="Chung nhan Tin Nhiem Mang" target="_blank"><img class="lazyload" data-src="https://tinnhiemmang.vn/handle_cert?id=topzone.vn" width="150" alt="Chung nhan Tin Nhiem Mang"></a>
+				<a href="//www.dmca.com/Protection/Status.aspx?ID=4f44c8e7-b645-4ddb-8aec-c130d0598c85" target="_blank" title="DMCA.com Protection Status" class="dmca-badge">
+					<img class="lazyload" data-src="https://images.dmca.com/Badges/_dmca_premi_badge_4.png?ID=4f44c8e7-b645-4ddb-8aec-c130d0598c85" alt="DMCA.com Protection Status" />
+				</a>
+			</div>
+		</div>
+		<div class="footer__logo">
+			<p class="footer__logo-hd">Ghé thăm các website khác cùng tập đoàn MWG</p>
+			<ul class="footer__logo-list">
+				<li>
+					<a rel="nofollow" href="https://www.thegioididong.com/" target="_blank">
+						<i class="iconlogo-thegioididong"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.dienmayxanh.com/" target="_blank">
+						<i class="iconlogo-dienmayxanh"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.bachhoaxanh.com/" target="_blank">
+						<i class="iconlogo-bachhoaxanh"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.nhathuocankhang.com/" target="_blank" title="Chuỗi nhà thuốc chuẩn GPP">
+						<i class="iconlogo-ankhang"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://avakids.com/" target="_blank" title="Chuỗi cửa hàng mẹ và bé">
+						<i class="iconlogo-kids"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.avasport.com/" target="_blank" title="Chuỗi cửa hàng thể thao">
+						<i class="iconlogo-sport"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.dichvutantam.com/" target="_blank" title="Dịch vụ vệ sinh máy lạnh, sửa chữa điện nước, lắp đặt máy lạnh, máy giặt, tivi">
+						<i class="iconlogo-tantam"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.4kfarm.com/" target="_blank" title="Nông trại rau sạch">
+						<i class="iconlogo-4kfarm"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://vieclam.thegioididong.com/" target="_blank" title="Trang tuyển dụng của tập đoàn Thế Giới Di Động">
+						<i class="iconlogo-vieclam"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!-- endfooter -->
+</body>
+</html>
+
+

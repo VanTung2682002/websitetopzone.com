@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>TopZone - iPhone</title>
+	<link rel="stylesheet" href="css/iphone.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/home.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/web.css">
+	<script type="text/javascript">
+		$(function() {
+			var pull        = $('#pull');
+			menu        = $('nav ul');
+			menuHeight  = menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+		});
+
+		$(window).resize(function(){
+			var w = $(window).width();
+			if(w > 320 && menu.is(':hidden')) {
+				menu.removeAttr('style');
+			}
+		});
+	</script>
+</head>
+<body>    
+	<!-- header -->
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<div id="logo" class="col-md-3 col-sm-12 col-xs-12">
+					<h1>
+						<div class="logo-header"><a href="home.html"><img src="img/home/logo.png"></a>	</div>					
+						<nav><a id="pull" class="btn btn-danger" href="#">
+							<i class="fa fa-bars"></i>
+						</a></nav>			
+					</h1>
+				</div>
+				<div id="search" class="col-md-7 col-sm-12 col-xs-12">
+					<input type="text" name="text" value="Nhập từ khóa ...">
+					<script>
+						var nhaptukhoa = document.querySelector('input[value="Nhập từ khóa ..."]');
+						console.log([nhaptukhoa])
+						nhaptukhoa.onclick=function(){
+							nhaptukhoa.value="";
+						}
+						nhaptukhoa.onblur=function(){
+							nhaptukhoa.value="Nhập từ khóa ...";
+						}
+					</script>
+					<input type="submit" name="submit" value="Tìm Kiếm">
+				</div>
+				<div id="cart" class="col-md-2 col-sm-12 col-xs-12">
+					<a href="cart.html">2</a>		    
+				</div>
+			</div>			
+		</div>
+	</header><!-- /header -->
+	<!-- endheader -->
+
+	<!-- main -->
+	<section id="body">
+		<div class="container">
+			<div class="row">
+				<div id="sidebar" class="col-md-3">
+					<nav id="menu">
+						<ul>
+							<li class="menu-item">danh mục sản phẩm</li>
+							<li class="menu-item"><a href="category-iphone.html" title="">iPhone</a></li>
+							<li class="menu-item"><a href="category-mac.html" title="">Mac</a></li>
+							<li class="menu-item"><a href="category-ipad.html" title="">iPad</a></li>
+							<li class="menu-item"><a href="category-watch.html" title="">Watch</a></li>
+							<li class="menu-item"><a href="category-sound.html" title="">Âm thanh</a></li>
+							<li class="menu-item"><a href="category-accessory.html" title="">Phụ kiện</a></li>
+							<li class="menu-item"><a href="#" title="">TopCare</a></li>						
+						</ul>
+						<!-- <a href="#" id="pull">Danh mục</a> -->
+					</nav>
+
+					<!-- <div id="banner-l" class="text-center">
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-1.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-2.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-5.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-6.png" alt="" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="#"><img src="img/home/banner-l-7.png" alt="" class="img-thumbnail"></a>
+						</div>
+					</div> -->
+				</div>
+
+				<div id="main" class="col-md-9">
+					<!-- main -->
+					<!-- phan slide la cac hieu ung chuyen dong su dung jquey -->
+					<div id="slider">
+						<div id="demo" class="carousel slide" data-ride="carousel">
+
+							<!-- Indicators -->
+							<ul class="carousel-indicators">
+								<li data-target="#demo" data-slide-to="0" class="active"></li>
+								<li data-target="#demo" data-slide-to="1"></li>
+								<li data-target="#demo" data-slide-to="2"></li>
+							</ul>
+
+							<!-- The slideshow -->
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="img/home/banner-l-1.png" alt="Los Angeles" >
+								</div>
+								<div class="carousel-item">
+									<img src="img/home/banner-l-2.png" alt="Chicago">
+								</div>
+								<div class="carousel-item">
+									<img src="img/home/banner-l-3.png" alt="New York" >
+								</div>
+							</div>
+
+							<!-- Left and right controls -->
+							<a class="carousel-control-prev" href="#demo" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</a>
+							<a class="carousel-control-next" href="#demo" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</a>
+						</div>
+					</div>
+
+					<div id="banner-t" class="text-center">
+						<div class="row">
+							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
+								<a href="#"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
+							</div>
+							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
+								<a href="#"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
+							</div>
+						</div>					
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				
+				<ul class="listing-cate">
+					<li class=" item  __cate_54" data-index="1" data-id="290053" data-issetup="0" data-maingroup="16" data-subgroup="4659" data-type="1" data-vehicle="1" data-productcode="0164659000058" data-pos="1">
+							<a href="/am-thanh/airpods-3" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="AirPods 3 sạc Lightning" data-id="290053" data-price="4790000.0" data-brand="Apple" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_54">
+							<img class="thumb lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/290053/s16/airpods-3-hop-sac-khong-day-thumb-650x650.png" alt="AirPods 3 sạc Lightning" src="https://cdn.tgdd.vn/Products/Images/54/290053/s16/airpods-3-hop-sac-khong-day-thumb-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			AirPods 3 sạc Lightning        </h4>
+			
+							<div class="box-p">
+								<strong class="price">4.790.000₫</strong>
+								<p class="price-old black">5.390.000₫</p>
+									<span class="percent">-11%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item ajaxed __cate_54" data-index="2" data-id="289781" data-issetup="0" data-maingroup="16" data-subgroup="4659" data-type="0" data-vehicle="1" data-productcode="0164659000057" data-pos="2">
+							<a href="/am-thanh/airpods-pro-2" data-s="Teaser" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="AirPods Pro (2nd Gen)" data-id="289781" data-price="6990000.0" data-brand="Apple" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_54">
+							<img class="thumb lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/289781/s16/airpods-pro-2-thumb-650x650.png" alt="AirPods Pro (2nd Gen)" src="https://cdn.tgdd.vn/Products/Images/54/289781/s16/airpods-pro-2-thumb-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			AirPods Pro (2nd Gen)        </h4>
+			
+							<strong class="price">6.990.000₫</strong>
+						<p class="item-txt-online ">Hàng sắp về</p>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="3" data-id="253802" data-issetup="0" data-maingroup="16" data-subgroup="4659" data-type="1" data-vehicle="1" data-productcode="0164659000044" data-pos="3">
+							<a href="/am-thanh/bluetooth-airpods-pro-magsafe-charge-apple-mlwk3" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="AirPods Pro Hộp sạc MagSafe" data-id="253802" data-price="5190000.0" data-brand="Apple" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="thumb ls-is-cached lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/253802/s16/bluetooth-airpods-pro-magsafe-charge-apple-mlwk3-261121-033421-650x650.png" alt="AirPods Pro Hộp sạc MagSafe" src="https://cdn.tgdd.vn/Products/Images/54/253802/s16/bluetooth-airpods-pro-magsafe-charge-apple-mlwk3-261121-033421-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			AirPods Pro Hộp sạc MagSafe        </h4>
+			
+							<div class="box-p">
+								<strong class="price">5.190.000₫</strong>
+								<p class="price-old black">6.790.000₫</p>
+									<span class="percent">-23%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="4" data-id="250701" data-issetup="0" data-maingroup="16" data-subgroup="4659" data-type="1" data-vehicle="1" data-productcode="0164659000043" data-pos="4">
+							<a href="/am-thanh/airpods-3-hop-sac-khong-day" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="AirPods 3" data-id="250701" data-price="4890000.0" data-brand="Apple" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="thumb ls-is-cached lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/250701/s16/airpods-3-thumb-650x650.png" alt="AirPods 3" src="https://cdn.tgdd.vn/Products/Images/54/250701/s16/airpods-3-thumb-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			AirPods 3        </h4>
+			
+							<div class="box-p">
+								<strong class="price">4.890.000₫</strong>
+								<p class="price-old black">5.490.000₫</p>
+									<span class="percent">-10%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="5" data-id="236331" data-issetup="0" data-maingroup="16" data-subgroup="4659" data-type="1" data-vehicle="1" data-productcode="0164659000005" data-pos="5">
+							<a href="/am-thanh/bluetooth-airpods-max-apple" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="AirPods Max" data-id="236331" data-price="11890000.0" data-brand="Apple" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="thumb lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/236331/s16/airpods-max-select-bac-thumb-650x650.png" alt="AirPods Max" src="https://cdn.tgdd.vn/Products/Images/54/236331/s16/airpods-max-select-bac-thumb-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			AirPods Max        </h4>
+			
+							<div class="box-p">
+								<strong class="price">11.890.000₫</strong>
+								<p class="price-old black">13.990.000₫</p>
+									<span class="percent">-15%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="6" data-id="236026" data-issetup="0" data-maingroup="16" data-subgroup="4659" data-type="1" data-vehicle="1" data-productcode="0164659000003" data-pos="6">
+							<a href="/am-thanh/tai-nghe-bluetooth-airpods-pro-apple-mwp22" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="AirPods Pro Hộp sạc không dây" data-id="236026" data-price="4990000.0" data-brand="Apple" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="thumb ls-is-cached lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/236026/s16/12-650x650.png" alt="AirPods Pro Hộp sạc không dây" src="https://cdn.tgdd.vn/Products/Images/54/236026/s16/12-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			AirPods Pro Hộp sạc không dây        </h4>
+			
+							<div class="box-p">
+								<strong class="price">4.990.000₫</strong>
+								<p class="price-old black">6.790.000₫</p>
+									<span class="percent">-26%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="7" data-id="236025" data-issetup="0" data-maingroup="16" data-subgroup="4659" data-type="1" data-vehicle="1" data-productcode="0164659000002" data-pos="7">
+							<a href="/am-thanh/tai-nghe-bluetooth-airpods-2-wireless-charge-mrxj2" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="AirPods 2 Hộp sạc không dây" data-id="236025" data-price="3490000.0" data-brand="Apple" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="thumb ls-is-cached lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/236025/s16/11-650x650.png" alt="AirPods 2 Hộp sạc không dây" src="https://cdn.tgdd.vn/Products/Images/54/236025/s16/11-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			AirPods 2 Hộp sạc không dây        </h4>
+			
+							<div class="box-p">
+								<strong class="price">3.490.000₫</strong>
+								<p class="price-old black">5.590.000₫</p>
+									<span class="percent">-37%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="8" data-id="236016" data-issetup="0" data-maingroup="16" data-subgroup="4659" data-type="1" data-vehicle="1" data-productcode="0164659000001" data-pos="8">
+							<a href="/am-thanh/tai-nghe-bluetooth-airpods-2-apple-mv7n2-trang" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="AirPods 2 Hộp sạc thường" data-id="236016" data-price="3390000.0" data-brand="Apple" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="thumb ls-is-cached lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/236016/s16/airpods-2-650x650.png" alt="AirPods 2 Hộp sạc thường" src="https://cdn.tgdd.vn/Products/Images/54/236016/s16/airpods-2-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			AirPods 2 Hộp sạc thường        </h4>
+			
+							<div class="box-p">
+								<strong class="price">3.390.000₫</strong>
+								<p class="price-old black">4.390.000₫</p>
+									<span class="percent">-22%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="9" data-id="88053" data-issetup="0" data-maingroup="16" data-subgroup="2831" data-type="1" data-vehicle="1" data-productcode="0162831000007" data-pos="9">
+							<a href="/am-thanh/tai-nghe-earpods-cong-lightning-apple-mmtn2" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="EarPods jack cắm Lightning" data-id="88053" data-price="690000.0" data-brand="Apple" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="thumb ls-is-cached lazyloaded" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/88053/s16/earpod-lightning-trang-thumb-1-650x650.png" alt="EarPods jack cắm Lightning" src="https://cdn.tgdd.vn/Products/Images/54/88053/s16/earpod-lightning-trang-thumb-1-650x650.png">
+						</div>
+			
+			
+			
+					<h4>
+			EarPods jack cắm Lightning        </h4>
+			
+							<div class="box-p">
+								<strong class="price">690.000₫</strong>
+								<p class="price-old black">790.000₫</p>
+									<span class="percent">-12%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="10" data-id="76061" data-issetup="0" data-maingroup="16" data-subgroup="2831" data-type="1" data-vehicle="1" data-productcode="0162831000020" data-pos="10">
+							<a href="/am-thanh/tai-nghe-earpods-apple-md827fea" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="EarPods jack cắm 3.5 mm" data-id="76061" data-price="690000.0" data-brand="Apple" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="lazyload thumb" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/76061/s16/earpod-trang-thumb-1-650x650.png" alt="EarPods jack cắm 3.5 mm">
+						</div>
+			
+			
+			
+					<h4>
+			EarPods jack cắm 3.5 mm        </h4>
+			
+							<div class="box-p">
+								<strong class="price">690.000₫</strong>
+								<p class="price-old black">790.000₫</p>
+									<span class="percent">-12%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_2162" data-index="11" data-id="286271" data-issetup="0" data-maingroup="16" data-subgroup="4779" data-type="1" data-vehicle="1" data-productcode="0164779000025" data-pos="11">
+							<a href="/am-thanh/loa-bluetooth-jbl-flip-6" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Loa Bluetooth JBL Flip 6" data-id="286271" data-price="2990000.0" data-brand="JBL" data-cate="Loa" data-box="BoxCate" class="main-contain">
+						<label>Mới</label>
+						<div class="item-img item-img_2162">
+							<img class="lazyload thumb" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/2162/286271/s16/loa-bluetooth-jbl-flip-6-xanh-thumb-650x650.png" alt="Loa Bluetooth JBL Flip 6">
+						</div>
+			
+			
+			
+					<h4>
+			Loa Bluetooth JBL Flip 6        </h4>
+			
+							<strong class="price">2.990.000₫</strong>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="12" data-id="272012" data-issetup="0" data-maingroup="16" data-subgroup="3346" data-type="1" data-vehicle="1" data-productcode="0163346000260" data-pos="12">
+							<a href="/am-thanh/tai-nghe-bluetooth-tws-sony-wf-1000xm3sme" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Tai nghe Bluetooth TWS Sony WF-1000XM3SME" data-id="272012" data-price="4310000.0" data-brand="Sony" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="lazyload thumb" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/272012/s16/tai-nghe-bluetooth-tws-sony-wf-1000xm3-091021-050723-650x650.png" alt="Tai nghe Bluetooth TWS Sony WF-1000XM3SME">
+						</div>
+			
+			
+			
+					<h4>
+			Tai nghe Bluetooth TWS Sony WF-1000XM3SME        </h4>
+			
+							<div class="box-p">
+								<strong class="price">4.310.000₫</strong>
+								<p class="price-old black">4.790.000₫</p>
+									<span class="percent">-10%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="13" data-id="269857" data-issetup="0" data-maingroup="16" data-subgroup="4659" data-type="1" data-vehicle="1" data-productcode="0164659000052" data-pos="13">
+							<a href="/am-thanh/true-wireless-beats-fit-pro-earbuds" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Tai nghe Bluetooth  True Wireless Beats Fit Pro Earbuds" data-id="269857" data-price="4390000.0" data-brand="Beats" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="lazyload thumb" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/269857/s16/true-wireless-beats-fit-pro-earbuds-mk2g3-trang-650x650.png" alt="Tai nghe Bluetooth  True Wireless Beats Fit Pro Earbuds">
+						</div>
+			
+			
+			
+					<h4>
+			Tai nghe Bluetooth  True Wireless Beats Fit Pro Earbuds        </h4>
+			
+							<div class="box-p">
+								<strong class="price">4.390.000₫</strong>
+								<p class="price-old black">5.490.000₫</p>
+									<span class="percent">-20%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="14" data-id="263811" data-issetup="0" data-maingroup="16" data-subgroup="4659" data-type="1" data-vehicle="1" data-productcode="0164659000049" data-pos="14">
+							<a href="/am-thanh/khong-day-powerbeats-pro" data-s="Nomal" data-site="16" data-pro="3" data-cache="False" data-sv="tz-web201" data-name="Tai nghe True Wireless Beats Powerbeats Pro" data-id="263811" data-price="4790000" data-brand="Beats" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="lazyload thumb" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/263811/s16/khong-day-powerbeats-pro-thumb-2-650x650.png" alt="Tai nghe True Wireless Beats Powerbeats Pro">
+						</div>
+			
+			
+			
+					<h4>
+			Tai nghe True Wireless Beats Powerbeats Pro        </h4>
+			
+							<div class="box-p">
+								<strong class="price">4.790.000₫</strong>
+								<p class="price-old black">5.990.000₫</p>
+									<span class="percent">-20%</span>
+							</div>
+				</a>
+			
+					</li>
+					<li class=" item  __cate_54" data-index="15" data-id="260096" data-issetup="0" data-maingroup="16" data-subgroup="3346" data-type="1" data-vehicle="1" data-productcode="0163346000340" data-pos="15">
+							<a href="/am-thanh/tai-nghe-chup-tai-bluetooth-sony-wh-xb910n" data-s="Nomal" data-site="16" data-pro="3" data-cache="True" data-sv="tz-web201" data-name="Tai nghe chụp tai Bluetooth Sony WH-XB910N" data-id="260096" data-price="4130000.0" data-brand="Sony" data-cate="Tai nghe" data-box="BoxCate" class="main-contain">
+						<div class="item-img item-img_54">
+							<img class="lazyload thumb" width="235" height="235" data-src="https://cdn.tgdd.vn/Products/Images/54/260096/s16/tai-nghe-chup-tai-bluetooth-sony-wh-xb910n-080722-112222-650x650.png" alt="Tai nghe chụp tai Bluetooth Sony WH-XB910N">
+						</div>
+			
+			
+			
+					<h4>
+			Tai nghe chụp tai Bluetooth Sony WH-XB910N        </h4>
+			
+							<div class="box-p">
+								<strong class="price">4.130.000₫</strong>
+								<p class="price-old black">4.590.000₫</p>
+									<span class="percent">-10%</span>
+							</div>
+				</a>
+			
+					</li>
+						</ul>
+				<!-- end main -->
+			</div>
+		</div>
+	</section>
+	<!-- endmain -->
+
+	<!-- footer -->
+	<footer>
+		<div class="foot">
+			<div class="logo-foot">
+				<a href="/">
+					<i class="topzone-logo"></i>
+				</a>
+				<a href="/tekzone/khac-biet-aar-va-apr-tieu-chuan-cua-hang-uy-quyen-apple-1411356">
+					<i class="topzone-autho"></i>
+				</a>
+			</div>
+			<ul class="list-foot">
+				<li>
+						<span>Tổng đài</span>
+					<a href="tel:1900969642">
+						<span>Mua hàng:</span>
+						<b>1900.9696.42</b> (7:30 - 22:00)
+					</a>
+					<a href="tel:1900986843">
+						<span>CSKH:</span>
+						<b>1900.9868.43</b> (8:00 - 21:30)
+					</a>
+					<a href="tel:1900866854">
+						<span>Kỹ thuật:</span>
+						<b>1900.8668.54</b> (7:30 - 22:00)
+					</a>
+	
+					<div class="footer-social">
+						<p class="txt">Kết nối với chúng tôi</p>
+						<a href="https://www.facebook.com/topzone.vn" target="_blank" class="link-social">
+							<i class="iconsocial-facebook"></i>
+						</a>
+						<a href="https://www.youtube.com/channel/UCoWdPNr8jSr7JM0OFlKvQHw" target="_blank" class="link-social">
+							<i class="iconsocial-youtube"></i>
+						</a>
+						<a href="https://zalo.me/2040551312124557463" target="_blank" class="link-social">
+							<i class="iconsocial-zalo"></i>
+						</a>
+					</div>
+					
+				</li>
+				<li>
+					<span>Hệ thống cửa hàng</span>
+					<a href="/he-thong-cua-hang">
+						Xem 78 cửa hàng 
+					</a>
+					<a href="/noi-quy-cua-hang">
+						Nội quy cửa hàng
+					</a>
+					<a href="/chat-luong-phuc-vu">
+						Chất lượng phục vụ
+					</a>
+					<a href="/bao-hanh-doi-tra">
+						Chính sách bảo hành & đổi trả
+					</a>
+				</li>
+				<li>
+					<span>Hỗ trợ khách hàng</span>
+					<a href="/dieu-kien-giao-dich">
+						Điều kiện giao dịch chung
+					</a>
+					<a href="/huong-dan-mua-hang">
+						Hướng dẫn mua hàng online
+					</a>
+					<a href="/giao-hang">
+						Chính sách giao hàng
+					</a>
+					<a href="/thanh-toan">
+						Hướng dẫn thanh toán
+					</a>
+				</li>
+				<li>
+					<span>Về thương hiệu TopZone</span>
+	
+					<a href="/tekzone/chuong-trinh-tich-diem-sieu-khung-qua-ung-dung-qua-tang-vip-1435360" class="color-link" style="color:#e5e5e5!important;">
+						Tích điểm Quà tặng VIP
+					</a>
+					<a href="/gioi-thieu">
+						Giới thiệu TopZone
+					</a>
+					<a href="https://www.thegioididong.com/b2b">
+						Bán hàng doanh nghiệp
+					</a>
+					<a href="/bao-mat-thong-tin">
+						Chính sách bảo mật thông tin
+					</a>
+					<a rel="nofollow" href="https://www.topzone.vn/?sclient=mobile">Xem bản mobile</a>
+				</li>
+					<li>
+						<span>Trung tâm bảo hành TopCare</span>
+						<a href="/topcare">
+							Giới thiệu TopCare
+						</a>
+					</li>
+			</ul>
+			<div class="text-cpr">
+				<p>
+					© 2018. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. <br />
+					Địa chỉ: 128 Trần Quang Khải, P. Tân Định, Q.1, TP. Hồ Chí Minh. Điện thoại: 028 38125960. 
+				</p>
+			</div>
+			<div class="certify">
+				<a href="http://online.gov.vn/Home/WebDetails/88735" target="_blank"><img class="lazyload" data-src="//cdn.tgdd.vn/mwgcart/topzone/images/certify-bct.png" width="127" /></a>
+				<a href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/topzonevn-1635823490" title="Chung nhan Tin Nhiem Mang" target="_blank"><img class="lazyload" data-src="https://tinnhiemmang.vn/handle_cert?id=topzone.vn" width="150" alt="Chung nhan Tin Nhiem Mang"></a>
+				<a href="//www.dmca.com/Protection/Status.aspx?ID=4f44c8e7-b645-4ddb-8aec-c130d0598c85" target="_blank" title="DMCA.com Protection Status" class="dmca-badge">
+					<img class="lazyload" data-src="https://images.dmca.com/Badges/_dmca_premi_badge_4.png?ID=4f44c8e7-b645-4ddb-8aec-c130d0598c85" alt="DMCA.com Protection Status" />
+				</a>
+			</div>
+		</div>
+		<div class="footer__logo">
+			<p class="footer__logo-hd">Ghé thăm các website khác cùng tập đoàn MWG</p>
+			<ul class="footer__logo-list">
+				<li>
+					<a rel="nofollow" href="https://www.thegioididong.com/" target="_blank">
+						<i class="iconlogo-thegioididong"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.dienmayxanh.com/" target="_blank">
+						<i class="iconlogo-dienmayxanh"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.bachhoaxanh.com/" target="_blank">
+						<i class="iconlogo-bachhoaxanh"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.nhathuocankhang.com/" target="_blank" title="Chuỗi nhà thuốc chuẩn GPP">
+						<i class="iconlogo-ankhang"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://avakids.com/" target="_blank" title="Chuỗi cửa hàng mẹ và bé">
+						<i class="iconlogo-kids"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.avasport.com/" target="_blank" title="Chuỗi cửa hàng thể thao">
+						<i class="iconlogo-sport"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.dichvutantam.com/" target="_blank" title="Dịch vụ vệ sinh máy lạnh, sửa chữa điện nước, lắp đặt máy lạnh, máy giặt, tivi">
+						<i class="iconlogo-tantam"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://www.4kfarm.com/" target="_blank" title="Nông trại rau sạch">
+						<i class="iconlogo-4kfarm"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="https://vieclam.thegioididong.com/" target="_blank" title="Trang tuyển dụng của tập đoàn Thế Giới Di Động">
+						<i class="iconlogo-vieclam"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!-- endfooter -->
+</body>
+</html>
